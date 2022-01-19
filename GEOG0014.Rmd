@@ -234,10 +234,24 @@ knitr::include_graphics('images/w08/crime_ci.png')
 ### Creating selections in QGIS {-}
 Because the crime data set covers the whole of London, and even records some crimes in locations outside of London, QGIS may get a little slow. As we are only interested in crimes in Camden and Islington we want to keep only those crimes that took place in these boroughs, and remove the rest. We will do that in two steps. First we wil export the boundaries of Camden and Islington as a separate file. Second we will select the crimes that fall within the boundaries of Camden and Islington. Let's first export the boundaries of Camden and Islington:
 
-- Untick the boxes of the `roads` and `2021-11-metropolitan-street` layers to deactivate them.
+- Untick the boxes of the `roads` and `2021-11-metropolitan-street` layers in the **Layers** panel to deactivate them.
 - Select the `boroughs` layer by clicking on it.
-- Click on the **Select Features by Area or Single Click** button: <img src='images/w08/select.png'>
+- Click on the **Select Features by Area or Single Click** button: <br /><br /> 
+```{r select-features, echo=FALSE, fig.align='center'}
+knitr::include_graphics('images/w08/select.png')
+```
+<br />*Please note that the **Select Features by Area or Single Click** button may not be in the same place as it is in the GIF below.* <br /><br />
+- Press and hold the **Shift** button on your keyboard and click on Camden and Islington.
+- Right click on the `boroughs` layer in the **Layers** panel > **Export** > **Save Selected Features As ... **.
+- Set the **Format** to **Esri Shapefile**.
+- Click on the three dots (**...**) next to **File name**, navigate to your *working directory* and save the file as `cam_is`. 
+- A new layer should now appear and you can untick the box next to the `boroughs` layer.
 
+The GIF below summarises these steps:
+
+```{r select-boroughs, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Selecting and exporting the boroughs of Camden and Islington. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/select_export.gif){target="_blank"}'}
+knitr::include_graphics('images/w08/select_export.gif')
+```
 
 ## Worksheet {-}
 Now you have worked through the steps in the computer tutorial on [downloading](#downloading-crime-data) and [mapping](#mapping-crime-data) crime data, you need to conduct the following analysis **as a group**:

@@ -402,10 +402,24 @@ Figure 25: All crime that is recorded in Camden and Islington in November 2021. 
 <h3>Creating selections in QGIS<a href="#creating-selections-in-qgis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Because the crime data set covers the whole of London, and even records some crimes in locations outside of London, QGIS may get a little slow. As we are only interested in crimes in Camden and Islington we want to keep only those crimes that took place in these boroughs, and remove the rest. We will do that in two steps. First we wil export the boundaries of Camden and Islington as a separate file. Second we will select the crimes that fall within the boundaries of Camden and Islington. Let’s first export the boundaries of Camden and Islington:</p>
 <ul>
-<li>Untick the boxes of the <code>roads</code> and <code>2021-11-metropolitan-street</code> layers to deactivate them.</li>
+<li>Untick the boxes of the <code>roads</code> and <code>2021-11-metropolitan-street</code> layers in the <strong>Layers</strong> panel to deactivate them.</li>
 <li>Select the <code>boroughs</code> layer by clicking on it.</li>
-<li>Click on the <strong>Select Features by Area or Single Click</strong> button: <img src='images/w08/select.png'></li>
+<li>Click on the <strong>Select Features by Area or Single Click</strong> button: <br /><br />
+<img src="images/w08/select.png" width="50" style="display: block; margin: auto;" />
+<br /><em>Please note that the <strong>Select Features by Area or Single Click</strong> button may not be in the same place as it is in the GIF below.</em> <br /><br /></li>
+<li>Press and hold the <strong>Shift</strong> button on your keyboard and click on Camden and Islington.</li>
+<li>Right click on the <code>boroughs</code> layer in the <strong>Layers</strong> panel &gt; <strong>Export</strong> &gt; <strong>Save Selected Features As … </strong>.</li>
+<li>Set the <strong>Format</strong> to <strong>Esri Shapefile</strong>.</li>
+<li>Click on the three dots (<strong>…</strong>) next to <strong>File name</strong>, navigate to your <em>working directory</em> and save the file as <code>cam_is</code>.</li>
+<li>A new layer should now appear and you can untick the box next to the <code>boroughs</code> layer.</li>
 </ul>
+<p>The GIF below summarises these steps:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:select-boroughs"></span>
+<img src="images/w08/select_export.gif" alt="Selecting and exporting the boroughs of Camden and Islington. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/select_export.gif){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 26: Selecting and exporting the boroughs of Camden and Islington. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/select_export.gif" target="_blank">[Enlarge image]</a>
+</p>
+</div>
 </div>
 </div>
 <div id="worksheet" class="section level2 unnumbered hasAnchor">
