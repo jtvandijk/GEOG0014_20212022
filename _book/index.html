@@ -123,7 +123,7 @@ Figure 1: London: The Information Capital by Professor <a href="https://jcheshir
 </div>
 <div id="this-week" class="section level2 unnumbered hasAnchor">
 <h2>This week<a href="#this-week" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This week we will be mapping crime <strong>hotspots</strong> in the London boroughs of <a href="https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en">Camden</a> and <a href="https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en">Islington</a>. The data we will be working with for this week’s task are downloaded from the <a href="https://data.police.uk/">data.police.uk</a> website. The release of official police crime data to the public was controversial at the time, with some people expressing concern that areas will have reputational damage, that the identities of victims would be revealed and that there would be social and economic consequences such as a fall in house prices in high crime areas. Others argued that the release of the data would be an important step in making the police force more accountable since the public could track whether crimes were being solved or if police are using their stop and search powers to target specific groups.</p>
+<p>This week we will be mapping <strong>crime hotspots</strong> in the London boroughs of <a href="https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en">Camden</a> and <a href="https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en">Islington</a>. The data we will be working with for this week’s task are downloaded from the <a href="https://data.police.uk/">data.police.uk</a> website. The release of official police crime data to the public was controversial at the time, with some people expressing concern that areas will have reputational damage, that the identities of victims would be revealed and that there would be social and economic consequences such as a fall in house prices in high crime areas. Others argued that the release of the data would be an important step in making the police force more accountable since the public could track whether crimes were being solved or if police are using their stop and search powers to target specific groups.</p>
 <div class="note">
 <p><strong>Note</strong> <br />
 You are expected to work through the following computer tutorial on your own, however, you need to submit your worksheet for this week as a group.</p>
@@ -131,30 +131,66 @@ You are expected to work through the following computer tutorial on your own, ho
 </div>
 <div id="getting-started" class="section level2 unnumbered hasAnchor">
 <h2>Getting started<a href="#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Some of you may already have played around with some GIS software such as <a href="https://www.arcgis.com/index.html">ArcGIS</a>, but today we will be using the open-source GIS sofware suite <a href="https://www.qgis.org/en/site/">QGIS</a>. A copy of <a href="https://www.qgis.org/en/site/">QGIS</a> comes pre-installed on all cluster room computers as well as on <a href="https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere">Desktop@UCL Anywhere</a>. <a href="mailto:Desktop@UCL" class="email">Desktop@UCL</a> Anywhere is a service that allows remote access to UCL resources for staff and students. All you need is a valid UCL user ID and password, an internet connection and supported web browser. Today we will be using this <a href="mailto:Desktop@UCL" class="email">Desktop@UCL</a> Anywhere service. Let’s get started by opening an internet browser and navigating to: <a href="https://ucldesktop.cloud.com">https://ucldesktop.cloud.com</a>.</p>
+<p>Some of you may already have played around with some GIS software such as <a href="https://www.arcgis.com/index.html">ArcGIS</a>, but today we will be using the open-source GIS sofware suite <a href="https://www.qgis.org/en/site/">QGIS</a>. A copy of <a href="https://www.qgis.org/en/site/">QGIS</a> comes pre-installed on all cluster room computers as well as on <a href="https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere">Desktop@UCL Anywhere</a>. <a href="mailto:Desktop@UCL" class="email">Desktop@UCL</a> Anywhere is a service that allows remote access to UCL resources for staff and students. All you need is a valid UCL user ID and password, an internet connection and supported web browser. Today we will be using this <a href="mailto:Desktop@UCL" class="email">Desktop@UCL</a> Anywhere service.</p>
+<p>Let’s get started by opening an internet browser such as <a href="https://www.google.co.uk/chrome/?brand=FHFK&amp;gclid=Cj0KCQiAip-PBhDVARIsAPP2xc26lB3ONziz2KnCd7Ac1MVjTx66n0Ull4R8oiQqzXzgKnJSqRCwK60aAhmFEALw_wcB&amp;gclsrc=aw.ds">Google Chrome</a> or <a href="https://www.microsoft.com/en-us/edge">Microsoft Edge</a> and navigating to: <a href="https://ucldesktop.cloud.com">https://ucldesktop.cloud.com</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ucl-desktop-login"></span>
-<img src="images/w08/ucl_login.png" alt="[Desktop@UCL Anywhere]((https://ucldesktop.cloud.com)) login interface." width="850pt" />
+<img src="images/w08/ucl_login.png" alt="[Desktop@UCL Anywhere]((https://ucldesktop.cloud.com)) login interface. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/ucl_login.png){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
-Figure 2: <a href="(https://ucldesktop.cloud.com)">Desktop@UCL Anywhere</a> login interface.
+Figure 2: <a href="(https://ucldesktop.cloud.com)">Desktop@UCL Anywhere</a> login interface. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/ucl_login.png" target="_blank">[Enlarge image]</a>
 </p>
 </div>
-<p>You can login with your normal <strong>UCL username</strong> and <strong>UCL password</strong>. After this, you click on the <a href="mailto:Desktop@UCL" class="email">Desktop@UCL</a> Anywhere icon to start the service:</p>
+<p>You can log in with your normal <strong>UCL username</strong> and <strong>UCL password</strong>. After this, you click on the <a href="mailto:Desktop@UCL" class="email">Desktop@UCL</a> Anywhere icon to start the service:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ucl-desktop-start"></span>
-<img src="images/w08/ucl_start.png" alt="Starting [Desktop@UCL Anywhere]((https://ucldesktop.cloud.com))." width="850pt" />
+<img src="images/w08/ucl_start.png" alt="Starting [Desktop@UCL Anywhere]((https://ucldesktop.cloud.com)). [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/ucl_start.png){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
-Figure 3: Starting <a href="(https://ucldesktop.cloud.com)">Desktop@UCL Anywhere</a>.
+Figure 3: Starting <a href="(https://ucldesktop.cloud.com)">Desktop@UCL Anywhere</a>. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/ucl_start.png" target="_blank">[Enlarge image]</a>
 </p>
 </div>
 <p>It may take a few minutes to load, but after this you should see your normal UCL Windows desktop:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ucl-desktop-login-success"></span>
-<img src="images/w08/ucl_login_success.png" alt="Your [Desktop@UCL Anywhere]((https://ucldesktop.cloud.com))." width="850pt" />
+<img src="images/w08/ucl_login_success.png" alt="Your [Desktop@UCL Anywhere]((https://ucldesktop.cloud.com)). [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/ucl_login_success.png){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
-Figure 4: Your <a href="(https://ucldesktop.cloud.com)">Desktop@UCL Anywhere</a>.
+Figure 4: Your <a href="(https://ucldesktop.cloud.com)">Desktop@UCL Anywhere</a>. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/ucl_login_success.png" target="_blank">[Enlarge image]</a>
 </p>
 </div>
 </div>
 <div id="downloading-crime-data" class="section level2 unnumbered hasAnchor">
 <h2>Downloading crime data<a href="#downloading-crime-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For our crime data, we will use data directly from the Police Data Portal, which you can find at <a href="https://data.police.uk/">data.police.uk</a>. This Data Portal allows you to access and generate tabular data for crime recorded in the U.K. across different the different police forces.</p>
+<p>In total, there are 45 territorial police forces (TPF) and 3 special police forces (SPF) of the United Kingdom. Each TPF covers a specific area in the UK (e.g. the “West Midlands Police Force”), whilst the SPFs are cross-jurisdiction and cover specific types of crime, such as the British Transport Police. Therefore, when we want to download data for a specific area, we need to know which Police Force covers the Area of Interest (AOI) for our investigation.</p>
+<p>When you look to download crime data for London, for example, there are two territorial police forces working within the city and its greater metropolitan area:</p>
+<ul>
+<li><em>The Metropolitan Police Force</em>, which covers nearly the entire London area, including Greater London</li>
+<li><em>The City of London Police</em>, which covers the City of London. The Met has no jurisdiction in the Cit of London.</li>
+</ul>
+<p>Today we will leave the City of London for what it is as we are looking at <strong>crime hotspots</strong> in the London boroughs of <a href="https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en">Camden</a> and <a href="https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en">Islington</a>, both of which are not part of the City of London. To do this, open a browser (<strong>within</strong> your <a href="mailto:Desktop@UCL" class="email">Desktop@UCL</a> environment) and navigate to <a href="https://data.police.uk/">data.police.uk</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:data-police"></span>
+<img src="images/w08/data_police.png" alt="The landing page of [data.police.uk](https://data.police.uk). [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/data_police.png){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 5: The landing page of <a href="https://data.police.uk">data.police.uk</a>. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/data_police.png" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+<p>Click on <strong>Downloads</strong> and subsequently select <em>November 2021</em> to <em>November 2021</em> as data range and tick the box for the <em>Metropolitan Police Services</em>. With this selection we can now download all crime data recorded by the Metropolitan Police Services for the month of November 2021.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:data-police-select"></span>
+<img src="images/w08/select_data.png" alt="Select the data that we want to download. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/select_data.png){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 6: Select the data that we want to download. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/select_data.png" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+<p>Make sure that the box in front of <strong>Include crime data</strong> is ticked - it should be ticked by default - and proceed to click on <strong>Generate file</strong>. Once your file is generated you can click on <strong>Download now</strong>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:data-police-download"></span>
+<img src="images/w08/download_now.png" alt="Download the data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/download_now.png){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 7: Download the data. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/download_now.png" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+<p>Save the file as <code>crime_met_november2021</code> in your <code>Downloads</code> folder.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:data-police-save"></span>
+<img src="images/w08/save_now.png" alt="Save the data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_now.png){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 8: Save the data. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/save_now.png" target="_blank">[Enlarge image]</a>
+</p>
+</div>
 </div>
 <div id="mapping-crime-data" class="section level2 unnumbered hasAnchor">
 <h2>Mapping crime data<a href="#mapping-crime-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>

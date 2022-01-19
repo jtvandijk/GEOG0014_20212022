@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.12)  19 JAN 2022 16:05
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.12)  19 JAN 2022 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -391,7 +391,8 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibsep=\skip66
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count312
-) (./GEOG0014.aux)
+)
+No file GEOG0014.aux.
 \openout1 = `GEOG0014.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
@@ -659,9 +660,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 89.
 LaTeX Info: Redefining \pageref on input line 89.
 LaTeX Info: Redefining \nameref on input line 89.
-(./GEOG0014.out) (./GEOG0014.out)
 \@outlinefile=\write3
 \openout3 = `GEOG0014.out'.
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
 (Font)              scaled to size 12.0pt on input line 91.
@@ -697,24 +700,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [2
 
-] (./GEOG0014.toc
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 2.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 2.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 2.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 2.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 2.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 2.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 2.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 2.
-)
+]
 \tf@toc=\write4
 \openout4 = `GEOG0014.toc'.
 
@@ -738,48 +724,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--112
 \TU/lmr/m/n/10 fessor [James Cheshire](https://jcheshire.com/) and [Oliver
  []
 
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 130.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 130.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.00092pt on input line 130.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.00064pt on input line 130.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.00046pt on input line 130.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 130.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 130.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 130.
 [5] [6]
 File: images/w08/ucl_login.png Graphic file (type bmp)
 <images/w08/ucl_login.png>
 
-Overfull \hbox (505.00145pt too wide) in paragraph at lines 134--135
+Overfull \hbox (505.00145pt too wide) in paragraph at lines 136--137
  [][] 
  []
 
-
-LaTeX Warning: Float too large for page by 24.67146pt on input line 139.
-
-File: images/w08/ucl_start.png Graphic file (type bmp)
-<images/w08/ucl_start.png>
-
-Overfull \hbox (505.00145pt too wide) in paragraph at lines 145--146
- [][] 
- []
-
-
-LaTeX Warning: Float too large for page by 15.06146pt on input line 150.
-
-File: images/w08/ucl_login_success.png Graphic file (type bmp)
-<images/w08/ucl_login_success.png>
-
-Overfull \hbox (505.00145pt too wide) in paragraph at lines 156--157
- [][] 
- []
-
-
-LaTeX Warning: Float too large for page by 15.06146pt on input line 161.
-
-[7] [8] [9] [10] [11] (./GEOG0014.aux)
-Package rerunfilecheck Info: File `GEOG0014.out' has not changed.
-(rerunfilecheck)             Checksum: 2DD7C10E84063BF655EAB035C3367B44;905.
- ) 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.140 ...ages/w08/ucl_login.png){target="_blank"}}
+                                                  \label{fig:ucl-desktop-login} 
 Here is how much of TeX's memory you used:
- 17008 strings out of 478256
- 313679 string characters out of 5855041
- 758900 words of memory out of 5000000
- 37312 multiletter control sequences out of 15000+600000
+ 16948 strings out of 478256
+ 312158 string characters out of 5855041
+ 757017 words of memory out of 5000000
+ 37264 multiletter control sequences out of 15000+600000
  409849 words of font info for 76 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 86i,6n,121p,1257b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 86i,6n,121p,1257b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on GEOG0014.pdf (11 pages).
+Output written on GEOG0014.pdf (6 pages).

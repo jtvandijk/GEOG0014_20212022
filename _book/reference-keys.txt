@@ -2,3 +2,7 @@ fig:london-information-capital
 fig:ucl-desktop-login
 fig:ucl-desktop-start
 fig:ucl-desktop-login-success
+fig:data-police
+fig:data-police-select
+fig:data-police-download
+fig:data-police-save

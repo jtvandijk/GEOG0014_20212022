@@ -104,3 +104,6 @@ You should be conducting the below steps together with your group members. You c
 
 ## Submission {-}
 Please submit your answers to the questions above in a short **group** report: no more than **500** words, a maximum of **4** maps, and **2** photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on [Moodle](https://moodle.ucl.ac.uk/course/view.php?id=23839); one submission per group. [That is it for this week's Geography in the Field!](https://www.youtube.com/watch?v=h_D3VFfhvs4)
+
+<!--chapter:end:index.Rmd-->
+
