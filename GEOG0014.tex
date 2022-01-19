@@ -477,6 +477,33 @@ The GIF below summarises these steps:
 \caption{Loading our crime data into QGIS. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/load_crime_data.gif){target="_blank"}}\label{fig:load-crime-data}
 \end{figure}
 
+Here we now have every crime reported for the month November 2021 appearing across all of London. We can zoom to the Camden and Islington by right clicking on the \texttt{roads} layer and opting for \textbf{Zoom to Layer}:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/crime_ci} 
+
+}
+
+\caption{All crime that is recorded in Camden and Islington in November 2021. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/crime_ci.png){target="_blank"}}\label{fig:crime-ci}
+\end{figure}
+
+\hypertarget{creating-selections-in-qgis}{%
+\subsection*{Creating selections in QGIS}\label{creating-selections-in-qgis}}
+\addcontentsline{toc}{subsection}{Creating selections in QGIS}
+
+Because the crime data set covers the whole of London, and even records some crimes in locations outside of London, QGIS may get a little slow. As we are only interested in crimes in Camden and Islington we want to keep only those crimes that took place in these boroughs, and remove the rest. We will do that in two steps. First we wil export the boundaries of Camden and Islington as a separate file. Second we will select the crimes that fall within the boundaries of Camden and Islington. Let's first export the boundaries of Camden and Islington:
+
+\begin{itemize}
+\tightlist
+\item
+  Untick the boxes of the \texttt{roads} and \texttt{2021-11-metropolitan-street} layers to deactivate them.
+\item
+  Select the \texttt{boroughs} layer by clicking on it.
+\item
+  Click on the \textbf{Select Features by Area or Single Click} button:
+\end{itemize}
+
 \hypertarget{worksheet}{%
 \section*{Worksheet}\label{worksheet}}
 \addcontentsline{toc}{section}{Worksheet}

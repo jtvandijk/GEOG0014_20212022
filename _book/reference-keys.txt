@@ -22,3 +22,5 @@ fig:organise-data
 fig:save-project
 fig:inspect-data
 fig:load-crime-data
+fig:crime-ci
+creating-selections-in-qgis

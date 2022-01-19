@@ -88,6 +88,7 @@
 <li><a href="#organising-our-layers">Organising our layers<span></span></a></li>
 <li><a href="#inspecting-crime-data-in-excel">Inspecting crime data in Excel<span></span></a></li>
 <li><a href="#loading-crime-data-into-qgis">Loading crime data into QGIS<span></span></a></li>
+<li class="chapter" data-level="0.0.1" data-path="index.html"><a href="#creating-selections-in-qgis"><i class="fa fa-check"></i><b>0.0.1</b> Creating selections in QGIS<span></span></a></li>
 </ul></li>
 <li><a href="#worksheet">Worksheet<span></span></a></li>
 <li><a href="#submission">Submission<span></span></a></li>
@@ -389,6 +390,22 @@ Figure 23: Inspecting our crime data <code>csv</code>. <a href="https://jtvandij
 Figure 24: Loading our crime data into QGIS. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/load_crime_data.gif" target="_blank">[Enlarge image]</a>
 </p>
 </div>
+<p>Here we now have every crime reported for the month November 2021 appearing across all of London. We can zoom to the Camden and Islington by right clicking on the <code>roads</code> layer and opting for <strong>Zoom to Layer</strong>:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:crime-ci"></span>
+<img src="images/w08/crime_ci.png" alt="All crime that is recorded in Camden and Islington in November 2021. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/crime_ci.png){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 25: All crime that is recorded in Camden and Islington in November 2021. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/crime_ci.png" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+</div>
+<div id="creating-selections-in-qgis" class="section level3 hasAnchor" number="0.0.1">
+<h3><span class="header-section-number">0.0.1</span> Creating selections in QGIS<a href="#creating-selections-in-qgis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Because the crime data set covers the whole of London, and even records some crimes in locations outside of London, QGIS may get a little slow. As we are only interested in crimes in Camden and Islington we want to keep only those crimes that took place in these boroughs, and remove the rest. We will do that in two steps. First we wil export the boundaries of Camden and Islington as a separate file. Second we will select the crimes that fall within the boundaries of Camden and Islington. Let’s first export the boundaries of Camden and Islington:</p>
+<ul>
+<li>Untick the boxes of the <code>roads</code> and <code>2021-11-metropolitan-street</code> layers to deactivate them.</li>
+<li>Select the <code>boroughs</code> layer by clicking on it.</li>
+<li>Click on the <strong>Select Features by Area or Single Click</strong> button: <img src='images/w08/select.png'></li>
+</ul>
 </div>
 </div>
 <div id="worksheet" class="section level2 unnumbered hasAnchor">

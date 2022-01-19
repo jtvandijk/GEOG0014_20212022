@@ -225,6 +225,20 @@ The GIF below summarises these steps:
 knitr::include_graphics('images/w08/load_crime_data.gif')
 ```
 
+Here we now have every crime reported for the month November 2021 appearing across all of London. We can zoom to the Camden and Islington by right clicking on the `roads` layer and opting for **Zoom to Layer**:
+
+```{r crime-ci, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='All crime that is recorded in Camden and Islington in November 2021. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/crime_ci.png){target="_blank"}'}
+knitr::include_graphics('images/w08/crime_ci.png')
+```
+
+### Creating selections in QGIS {-}
+Because the crime data set covers the whole of London, and even records some crimes in locations outside of London, QGIS may get a little slow. As we are only interested in crimes in Camden and Islington we want to keep only those crimes that took place in these boroughs, and remove the rest. We will do that in two steps. First we wil export the boundaries of Camden and Islington as a separate file. Second we will select the crimes that fall within the boundaries of Camden and Islington. Let's first export the boundaries of Camden and Islington:
+
+- Untick the boxes of the `roads` and `2021-11-metropolitan-street` layers to deactivate them.
+- Select the `boroughs` layer by clicking on it.
+- Click on the **Select Features by Area or Single Click** button: <img src='images/w08/select.png'>
+
+
 ## Worksheet {-}
 Now you have worked through the steps in the computer tutorial on [downloading](#downloading-crime-data) and [mapping](#mapping-crime-data) crime data, you need to conduct the following analysis **as a group**:
 
