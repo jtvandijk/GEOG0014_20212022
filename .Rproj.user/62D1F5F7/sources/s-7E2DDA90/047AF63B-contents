@@ -1,0 +1,18 @@
+--- 
+title: "GEOG0030: Geocomputation"
+author: Justin van Dijk
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+link-citations: yes
+github-repo: "jtvandijk/GEOG0030"
+description: "GEOG0030: Geocomputation handbook."
+url: 'https\://jtvandijk.github.io/GEOG0030/'
+---
+# (PART\*) Module overview {-}
+
+# Module Introduction {-}
+
+<!--chapter:end:index.Rmd-->
+
