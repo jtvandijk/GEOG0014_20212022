@@ -614,6 +614,42 @@ The QGIS screen now shows a colour for each crime type. The GIF below summarises
 \caption{Differentiating crime types. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/colour_crime.gif){target="_blank"}}\label{fig:colour-crimes}
 \end{figure}
 
+In the \textbf{Layers} panel, you can now expand the \texttt{cam\_is\_clip} layer and switch on and off individual crime types by ticking or unticking their respective boxes:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/one_crime} 
+
+}
+
+\caption{Only crime classified as *anti-social behaviour* is shown. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/one_crime.png){target="_blank"}}\label{fig:one-crime}
+\end{figure}
+
+In addition, we can create a \textbf{hotspot} or \textbf{heatmap}. QGIS can do this automatically by mapping the density of the points:
+
+\begin{itemize}
+\tightlist
+\item
+  Right click on the \texttt{cam\_is\_clip} layer in the \textbf{Layers} panel and click on \textbf{Properties \ldots{}}. Here we can change the symbology of the layer.
+\item
+  At the top of the menu change \textbf{Single Symbol} to \textbf{Heatmap}.
+\item
+  Using the drop down menu, change the \textbf{Color ramp} to \textbf{Magma} for a little more exciting map.
+\item
+  Under \textbf{Layer Rendering} set the \textbf{Opacity} to 60\%, so to blend the heatmap with the OSM basemap. Click \textbf{Apply}. \emph{This may take a few seconds.} Then click \textbf{OK}.
+\end{itemize}
+
+We now have created a rather nice visualisation of all crime in Camden and Islington. The GIF below summarises these steps:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/hot_crime} 
+
+}
+
+\caption{Adding a basemap layer. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/hot_crime.gif){target="_blank"}}\label{fig:hot-crime}
+\end{figure}
+
 \hypertarget{worksheet}{%
 \section*{Worksheet}\label{worksheet}}
 \addcontentsline{toc}{section}{Worksheet}
@@ -624,7 +660,7 @@ Now you have worked through the steps in the computer tutorial on \protect\hyper
 \subsubsection*{Part I: Camden and Islington}\label{part-i-camden-and-islington}}
 \addcontentsline{toc}{subsubsection}{Part I: Camden and Islington}
 
-This concerns \emph{anti-social behaviour} and \emph{bicycle theft} in Camden and Islington.
+This concerns \emph{anti-social behaviour} and \emph{theft from person} in Camden and Islington.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}

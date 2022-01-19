@@ -298,15 +298,31 @@ The QGIS screen now shows a colour for each crime type. The GIF below summarises
 knitr::include_graphics('images/w08/colour_crime.gif')
 ```
 
+In the **Layers** panel, you can now expand the `cam_is_clip` layer and switch on and off individual crime types by ticking or unticking their respective boxes:
 
+```{r one-crime, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Only crime classified as *anti-social behaviour* is shown. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/one_crime.png){target="_blank"}'}
+knitr::include_graphics('images/w08/one_crime.png')
+```
 
+In addition, we can create a **hotspot** or **heatmap**. QGIS can do this automatically by mapping the density of the points:
+
+- Right click on the `cam_is_clip` layer in the **Layers** panel and click on **Properties ...**. Here we can change the symbology of the layer.
+- At the top of the menu change **Single Symbol** to **Heatmap**.
+- Using the drop down menu, change the **Color ramp** to **Magma** for a little more exciting map.
+- Under **Layer Rendering** set the **Opacity** to 60%, so to blend the heatmap with the OSM basemap. Click **Apply**. *This may take a few seconds.* Then click **OK**.
+
+We now have created a rather nice visualisation of all crime in Camden and Islington. The GIF below summarises these steps:
+
+```{r hot-crime, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Adding a basemap layer. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/hot_crime.gif){target="_blank"}'}
+knitr::include_graphics('images/w08/hot_crime.gif')
+```
 
 ## Worksheet {-} 
 Now you have worked through the steps in the computer tutorial on [downloading](#downloading-crime-data) and [mapping](#mapping-crime-data) crime data, you need to conduct the following analysis **as a group**:
 
 #### Part I: Camden and Islington {-} 
 :::note
-This concerns *anti-social behaviour* and *bicycle theft* in Camden and Islington.
+This concerns *anti-social behaviour* and *theft from person* in Camden and Islington.
 :::
 
 1.	Using what you have learnt in the computer tutorial to create two heat maps for **Camden and Islington**. The first of **anti-social behaviour** and the second of **bicycle theft**.

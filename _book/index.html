@@ -473,6 +473,27 @@ Figure 29: Adding a basemap layer. <a href="https://jtvandijk.github.io/GEOG0014
 Figure 30: Differentiating crime types. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/colour_crime.gif" target="_blank">[Enlarge image]</a>
 </p>
 </div>
+<p>In the <strong>Layers</strong> panel, you can now expand the <code>cam_is_clip</code> layer and switch on and off individual crime types by ticking or unticking their respective boxes:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:one-crime"></span>
+<img src="images/w08/one_crime.png" alt="Only crime classified as *anti-social behaviour* is shown. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/one_crime.png){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 31: Only crime classified as <em>anti-social behaviour</em> is shown. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/one_crime.png" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+<p>In addition, we can create a <strong>hotspot</strong> or <strong>heatmap</strong>. QGIS can do this automatically by mapping the density of the points:</p>
+<ul>
+<li>Right click on the <code>cam_is_clip</code> layer in the <strong>Layers</strong> panel and click on <strong>Properties …</strong>. Here we can change the symbology of the layer.</li>
+<li>At the top of the menu change <strong>Single Symbol</strong> to <strong>Heatmap</strong>.</li>
+<li>Using the drop down menu, change the <strong>Color ramp</strong> to <strong>Magma</strong> for a little more exciting map.</li>
+<li>Under <strong>Layer Rendering</strong> set the <strong>Opacity</strong> to 60%, so to blend the heatmap with the OSM basemap. Click <strong>Apply</strong>. <em>This may take a few seconds.</em>. Then click <strong>OK</strong>.</li>
+</ul>
+<p>We now have created a rather nice visualisation of all crime in Camden and Islington. The GIF below summarises these steps:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:hot-crime"></span>
+<img src="images/w08/hot_crime.gif" alt="Adding a basemap layer. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/hot_crime.gif){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 32: Adding a basemap layer. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/hot_crime.gif" target="_blank">[Enlarge image]</a>
+</p>
+</div>
 </div>
 </div>
 <div id="worksheet" class="section level2 unnumbered hasAnchor">
@@ -481,7 +502,7 @@ Figure 30: Differentiating crime types. <a href="https://jtvandijk.github.io/GEO
 <div id="part-i-camden-and-islington" class="section level4 unnumbered hasAnchor">
 <h4>Part I: Camden and Islington<a href="#part-i-camden-and-islington" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="note">
-<p>This concerns <em>anti-social behaviour</em> and <em>bicycle theft</em> in Camden and Islington.</p>
+<p>This concerns <em>anti-social behaviour</em> and <em>theft from person</em> in Camden and Islington.</p>
 </div>
 <ol style="list-style-type: decimal">
 <li>Using what you have learnt in the computer tutorial to create two heat maps for <strong>Camden and Islington</strong>. The first of <strong>anti-social behaviour</strong> and the second of <strong>bicycle theft</strong>.</li>

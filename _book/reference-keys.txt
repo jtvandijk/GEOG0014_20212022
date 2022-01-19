@@ -28,3 +28,5 @@ fig:select-crimes
 fig:ready-4-vis
 fig:adding-basemap
 fig:colour-crimes
+fig:one-crime
+fig:hot-crime
