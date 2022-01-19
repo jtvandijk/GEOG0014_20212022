@@ -1,4 +1,4 @@
-mapping-london
-downloading-crime-data
-mapping-crime
-task
+fig:london-information-capital
+fig:ucl-desktop-login
+fig:ucl-desktop-start
+fig:ucl-desktop-login-success

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>GEOG0014.knit</title>
   <meta name="description" content="" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7" />
 
   <meta property="og:title" content="GEOG0014.knit" />
   <meta property="og:type" content="book" />
@@ -29,9 +29,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
+<script src="libs/header-attrs-2.11.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -41,16 +41,17 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -62,12 +63,24 @@
 
 
 
+<!--bookdown:title:start-->
+<!--bookdown:title:end-->
+
+<!--bookdown:toc:start-->
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
 
     <div class="book-summary">
       <nav role="navigation">
-
-
+<!--bookdown:toc2:start-->
+<ul>
+<li><a href="#mapping-london">Mapping London<span></span></a></li>
+<li><a href="#why-london">Why London?<span></span></a></li>
+<li><a href="#this-week">This week<span></span></a></li>
+<li><a href="#task">Task<span></span></a></li>
+<li><a href="#downloading-crime-data">Downloading crime data<span></span></a></li>
+<li><a href="#mapping-crime">Mapping crime<span></span></a></li>
+</ul>
+<!--bookdown:toc2:end-->
       </nav>
     </div>
 
@@ -83,69 +96,61 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!--bookdown:title:end-->
-<!--bookdown:title:start-->
-<p>test</p>
-
+<!--bookdown:toc:end-->
+<!--bookdown:body:start-->
+<div id="mapping-london" class="section level2 unnumbered hasAnchor">
+<h2 class="unnumbered hasAnchor">Mapping London<a href="#mapping-london" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="why-london" class="section level2 unnumbered hasAnchor">
+<h2 class="unnumbered hasAnchor">Why London?<a href="#why-london" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It is an exciting time to be a quantitative geographer in London. The city is generating more data for us to work with than ever before. Maps, graphics and infographics about the city are everywhere more people live here than at any time in London’s history. A great example of the variety of data that is available for London is captured in the book [London: The Information Capital] by <a href="https://jcheshire.com/">James Cheshire</a> and <a href="https://www.oliveruberti.com/the-information-capital">Oliver Uberti</a>. As geographers, we are in a critical position both to be able to capitalise on these developments for our own research but also view them a little more critically than others who have not had the benefit of decades of social and spatial research.</p>
+<div class="figure" style="text-align: center">
+<img src="images/w08/information_capital.png" alt="London: The Information Capital by Professor [James Cheshire](https://jcheshire.com/) and [Oliver Uberti](https://www.oliveruberti.com/the-information-capital)." width="500pt" />
+<p class="caption">
+(#fig:london-information-capital)London: The Information Capital by Professor <a href="https://jcheshire.com/">James Cheshire</a> and <a href="https://www.oliveruberti.com/the-information-capital">Oliver Uberti</a>.
+</p>
+</div>
+<p>The application of quantitative research methods to data about the “real-world” is at the heart of this exercise. All data are collected at a single point in time and so may become out of date, or they may be too generalised to capture the minutiae of an area. Such limitations are not as significant as they once were since we now have access to data in more detail than ever before, but this does not relinquish the need to get a sense for the broader context of the study area.</p>
+</div>
+<div id="this-week" class="section level2 unnumbered hasAnchor">
+<h2 class="unnumbered hasAnchor">This week<a href="#this-week" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The data selected for this week’s task are crime data downloaded from the <a href="data.police.uk">data.police.uk</a> website. The release of official Police crime data to the public was controversial at the time, with some people expressing concern that areas will have reputational damage, that the identities of victims would be revealed and that there would be social and economic consequences such as a fall in house prices in high crime areas. Others argued that the release of the data would be an important step in making the police force more accountable since the public could track whether crimes were being solved or if police are using their stop and search powers to target specific groups. You should reflect on these perspectives as you work with the data and think of ways that it can be used to tackle important social challenges.</p>
+</div>
+<div id="task" class="section level2 unnumbered hasAnchor">
+<h2 class="unnumbered hasAnchor">Task<a href="#task" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Working in your <strong>groups</strong> you should do the following:</p>
+<ol style="list-style-type: decimal">
+<li>Follow the steps in the computer tutorial below on how to produce a map of crime <strong>hotspots</strong> in the London boroughs of <a href="https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en">Camden</a> and <a href="https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en">Islington</a></li>
+<li>Using what you have learnt in the computer tutorial create two heat maps. The first of <strong>anti-social behaviour</strong> and the second <strong>bicycle theft</strong>.</li>
+<li>There are a number of crime “hot spots” that appear near UCL (particularly around Kings Cross Station). Using Google Streetview for context, what features distinguish them from their surrounding lower crime areas?</li>
+<li>Using the data, zoom in on the street you have been allocated. What is the dominant type of crime on this street and its surrounding area in December?</li>
+<li>Revisit the data.police.uk website and create a heatmap for crime around your street (there may be very few or no crimes in your allocated street so zooming out a little is fine) in April 2019 and August 2019. Do the patterns and dominant crime types differ over the course of the year?</li>
+<li>Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross what other datasets might be useful to analyse crime in London?</li>
+<li>Do you think the chances of falling victim of crime are higher or lower in the crime hotspots, how might you measure this?</li>
+</ol>
+<div class="note">
+<p><strong>Submission</strong>
+Please submit your answers to the questions above in a short <strong>group</strong> report: no more than <strong>500</strong> words, <strong>4</strong> maps maximum . This is the worksheet task for the week. You can find the submission link for this worksheet task on <a href="https://moodle.ucl.ac.uk/course/view.php?id=23839">Moodle</a></p>
+</div>
+</div>
+<div id="downloading-crime-data" class="section level2 unnumbered hasAnchor">
+<h2 class="unnumbered hasAnchor">Downloading crime data<a href="#downloading-crime-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="mapping-crime" class="section level2 unnumbered hasAnchor">
+<h2 class="unnumbered hasAnchor">Mapping crime<a href="#mapping-crime" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<!--chapter:end:index.Rmd-->
+</div>
+<!--bookdown:body:end-->
             </section>
 
           </div>
         </div>
       </div>
-
-
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
     </div>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"github": true,
-"facebook": false,
-"twitter": false,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": false
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/jtvandijk/GEOG0014/edit/master/%s",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["https://github.com/jtvandijk/GEOG0014/raw/master/%s"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
-});
-});
-</script>
+<!--bookdown:config-->
 
 </body>
 
