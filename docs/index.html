@@ -89,9 +89,10 @@
 <li><a href="#inspecting-crime-data-in-excel">Inspecting crime data in Excel<span></span></a></li>
 <li><a href="#loading-crime-data-into-qgis">Loading crime data into QGIS<span></span></a></li>
 <li><a href="#creating-selections-in-qgis">Creating selections in QGIS<span></span></a></li>
+<li><a href="#visualising-data-in-qgis">Visualising data in QGIS<span></span></a></li>
 </ul></li>
 <li><a href="#worksheet">Worksheet<span></span></a></li>
-<li><a href="#submission">Submission<span></span></a></li>
+<li><a href="#worksheet-submission">Worksheet submission<span></span></a></li>
 </ul></li>
 </ul>
 
@@ -406,7 +407,7 @@ Figure 25: All crime that is recorded in Camden and Islington in November 2021. 
 <li>Select the <code>boroughs</code> layer by clicking on it.</li>
 <li>Click on the <strong>Select Features by Area or Single Click</strong> button: <br /><br />
 <img src="images/w08/select.png" width="50" style="display: block; margin: auto;" />
-<br /><em>Please note that the <strong>Select Features by Area or Single Click</strong> button may not be in the same place as it is in the GIF below.</em> <br /><br /></li>
+<br /><em>Please note that the <strong>Select Features by Area or Single Click</strong> button be located in a different place as it is in the GIF below.</em> <br /><br /></li>
 <li>Press and hold the <strong>Shift</strong> button on your keyboard and click on Camden and Islington.</li>
 <li>Right click on the <code>boroughs</code> layer in the <strong>Layers</strong> panel &gt; <strong>Export</strong> &gt; <strong>Save Selected Features As … </strong>.</li>
 <li>Set the <strong>Format</strong> to <strong>Esri Shapefile</strong>.</li>
@@ -420,6 +421,30 @@ Figure 25: All crime that is recorded in Camden and Islington in November 2021. 
 Figure 26: Selecting and exporting the boroughs of Camden and Islington. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/select_export.gif" target="_blank">[Enlarge image]</a>
 </p>
 </div>
+<p>The next thing to do is to extract only those crimes that fall within the boundaries of our newly created <code>shapefile</code>:</p>
+<ul>
+<li>Go to <strong>Vector</strong> &gt; <strong>Geoprocessing Tools</strong> &gt; <strong>Clip …</strong>.</li>
+<li>Set <code>2011-11-metropolitan-street</code> as <strong>Input layer</strong> and set <code>cam_is</code> as <strong>Overlay layer</strong>.</li>
+<li>Click on the three dots (<strong>…</strong>) next to the empty box with <em>[Create temporary layer]</em> and opt for <strong>Save to File …</strong>. Navigate to your <em>working directory</em> and type in <code>cam_is_clip</code> as <strong>File name</strong>. Change <strong>Save as type</strong> to <code>SHP files (*.shp)</code> and click <strong>Save</strong>.</li>
+<li>Click <strong>Run</strong>. <em>This may take a few seconds.</em>. Once the process is done, you can click <strong>Close</strong>.</li>
+</ul>
+We now have successfully “clipped” the crimes that occurred within the boundaries of Camden and Islington. The GIF below summarises these steps:
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:select-crimes"></span>
+<img src="images/w08/select_crime.gif" alt="Selecting and exporting the crimes that fall within the boroughs of Camden and Islington. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/select_crime.gif){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 27: Selecting and exporting the crimes that fall within the boroughs of Camden and Islington. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/select_crime.gif" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+<p>Before moving to our visualisation, we can remove the <code>2011-11-metropolitan-street</code> layer by right clicking on the <code>layer</code> in the <strong>Layers</strong> panel and opting for <strong>Remove Layer…</strong>. We can do the same for the <code>boroughs</code> layer. Our QGIS screen should now look something like this:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ready-4-vis"></span>
+<img src="images/w08/ready_vis.png" alt="We are now ready to visualise our data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/ready_vis.png){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 28: We are now ready to visualise our data. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/ready_vis.png" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+</div>
+<div id="visualising-data-in-qgis" class="section level3 unnumbered hasAnchor">
+<h3>Visualising data in QGIS<a href="#visualising-data-in-qgis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
 </div>
 <div id="worksheet" class="section level2 unnumbered hasAnchor">
@@ -448,8 +473,8 @@ Figure 26: Selecting and exporting the boroughs of Camden and Islington. <a href
 </ol>
 </div>
 </div>
-<div id="submission" class="section level2 unnumbered hasAnchor">
-<h2>Submission<a href="#submission" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="worksheet-submission" class="section level2 unnumbered hasAnchor">
+<h2>Worksheet submission<a href="#worksheet-submission" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Please submit your answers to the questions above in a short <strong>group</strong> report: no more than <strong>500</strong> words, a maximum of <strong>4</strong> maps, and, if using, <strong>2</strong> photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on <a href="https://moodle.ucl.ac.uk/course/view.php?id=23839">Moodle</a>; one submission per group. <a href="https://www.youtube.com/watch?v=h_D3VFfhvs4">That is it for this week’s Geography in the Field!</a></p>
 
 </div>

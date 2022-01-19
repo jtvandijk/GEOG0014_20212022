@@ -24,3 +24,5 @@ fig:inspect-data
 fig:load-crime-data
 fig:crime-ci
 fig:select-boroughs
+fig:select-crimes
+fig:ready-4-vis

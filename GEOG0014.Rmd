@@ -240,7 +240,7 @@ Because the crime data set covers the whole of London, and even records some cri
 ```{r select-features, echo=FALSE, fig.align='center'}
 knitr::include_graphics('images/w08/select.png')
 ```
-<br />*Please note that the **Select Features by Area or Single Click** button may not be in the same place as it is in the GIF below.* <br /><br />
+<br />*Please note that the **Select Features by Area or Single Click** button be located in a different place as it is in the GIF below.* <br /><br />
 - Press and hold the **Shift** button on your keyboard and click on Camden and Islington.
 - Right click on the `boroughs` layer in the **Layers** panel > **Export** > **Save Selected Features As ... **.
 - Set the **Format** to **Esri Shapefile**.
@@ -252,6 +252,26 @@ The GIF below summarises these steps:
 ```{r select-boroughs, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Selecting and exporting the boroughs of Camden and Islington. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/select_export.gif){target="_blank"}'}
 knitr::include_graphics('images/w08/select_export.gif')
 ```
+
+The next thing to do is to extract only those crimes that fall within the boundaries of our newly created `shapefile`:
+
+- Go to **Vector** > **Geoprocessing Tools** > **Clip ...**.
+- Set `2011-11-metropolitan-street` as **Input layer** and set `cam_is` as **Overlay layer**.
+- Click on the three dots (**...**) next to the empty box with *[Create temporary layer]* and opt for **Save to File ...**. Navigate to your *working directory* and type in `cam_is_clip` as **File name**. Change **Save as type** to `SHP files (*.shp)` and click **Save**.
+- Click **Run**. *This may take a few seconds.*. Once the process is done, you can click **Close**. 
+
+We now have successfully "clipped" the crimes that occurred within the boundaries of Camden and Islington. The GIF below summarises these steps:
+```{r select-crimes, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Selecting and exporting the crimes that fall within the boroughs of Camden and Islington. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/select_crime.gif){target="_blank"}'}
+knitr::include_graphics('images/w08/select_crime.gif')
+```
+
+Before moving to our visualisation, we can remove the `2011-11-metropolitan-street` layer by right clicking on the `layer` in the **Layers** panel and opting for **Remove Layer...**. We can do the same for the `boroughs` layer. Our QGIS screen should now look something like this:
+
+```{r ready-4-vis, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='We are now ready to visualise our data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/ready_vis.png){target="_blank"}'}
+knitr::include_graphics('images/w08/ready_vis.png')
+```
+
+### Visualising data in QGIS {-}
 
 ## Worksheet {-}
 Now you have worked through the steps in the computer tutorial on [downloading](#downloading-crime-data) and [mapping](#mapping-crime-data) crime data, you need to conduct the following analysis **as a group**:
@@ -274,7 +294,7 @@ This concerns *all types* of crime in your allocated street.
 5.	Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross what other data sets might be useful to analyse crime in London?
 6.	Do you think the chances of falling victim of crime are higher or lower in the crime hotspots, how might you measure this? 
 
-## Submission {-}
+## Worksheet submission {-}
 Please submit your answers to the questions above in a short **group** report: no more than **500** words, a maximum of **4** maps, and, if using, **2** photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on [Moodle](https://moodle.ucl.ac.uk/course/view.php?id=23839); one submission per group. [That is it for this week's Geography in the Field!](https://www.youtube.com/watch?v=h_D3VFfhvs4)
 
 <!--chapter:end:index.Rmd-->
