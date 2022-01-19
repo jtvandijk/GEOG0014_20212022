@@ -1,6 +1,6 @@
-# GEOG0030 Geocomputation
+# GEOG0014 Geography in the Field II
 
-This GitHub repository generates the GEOG0030 Geocomputation handbook for the 2021-2022 academic year which can be found at: https://jtvandijk.github.io/GEOG0030/
+This GitHub repository generates the GEOG0014 Geography in the Field II worksheet W08 for the 2021-2022 academic year which can be found at: https://jtvandijk.github.io/GEOG0014/
 
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
