@@ -506,7 +506,7 @@ Because the crime data set covers the whole of London, and even records some cri
 
 \begin{center}\includegraphics[width=1.39in]{images/w08/select} \end{center}
 
-\emph{Please note that the \textbf{Select Features by Area or Single Click} button be located in a different place as it is in the GIF below.}
+\emph{Please note that the \textbf{Select Features by Area or Single Click} button may be located in a different place than it is in the GIF below.}
 - Press and hold the \textbf{Shift} button on your keyboard and click on Camden and Islington.
 - Right click on the \texttt{boroughs} layer in the \textbf{Layers} panel \textgreater{} \textbf{Export} \textgreater{} \textbf{Save Selected Features As \ldots{} }.
 - Set the \textbf{Format} to \textbf{Esri Shapefile}.
@@ -563,6 +563,31 @@ Before moving to our visualisation, we can remove the \texttt{2011-11-metropolit
 \hypertarget{visualising-data-in-qgis}{%
 \subsection*{Visualising data in QGIS}\label{visualising-data-in-qgis}}
 \addcontentsline{toc}{subsection}{Visualising data in QGIS}
+
+Based on the shapes of the streets and the outline of the street network, you may be able to recognise your allocated street. However, we can also add something called a \emph{base map} layer. A base map is a layer with geographic information that serves as a background and is incredibly useful when you want to add some context to your map. We do need a little plugin to add this base map. We can do that as follows:
+
+\begin{itemize}
+\tightlist
+\item
+  Go to \textbf{Plugins} \textgreater{} \textbf{Manage and Install Plugins}.
+\item
+  Search for \textbf{QuickMapServices} and click on \textbf{Install plugin}.
+\item
+  Once the plugin is installed you can go to \textbf{Web} \textgreater{} \textbf{QuickMapServices} \textgreater{} \textbf{OSM} \textgreater{} \textbf{OSM Standard}. \emph{OSM stands for \href{https://www.openstreetmap.org/\#map=6/54.910/-3.432}{OpenStreetMap}. OpenStreetMap is a collaborative project to create a free editable geographic database of the world.} It may take a few seconds to load the base map.
+\item
+  Turn off the Camden and Islington map layer (\texttt{cam\_is}) in the \textbf{Layers} panel by unticking it.
+\end{itemize}
+
+You now have a view of the street data, pulled from OpenStreetMap, with the crime data drawn on top. The GIF below summarises these steps:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/add_basemap} 
+
+}
+
+\caption{Adding a basemap layer. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_basemap.gif){target="_blank"}}\label{fig:adding-basemap}
+\end{figure}
 
 \hypertarget{worksheet}{%
 \section*{Worksheet}\label{worksheet}}

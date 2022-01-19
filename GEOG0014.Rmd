@@ -240,7 +240,7 @@ Because the crime data set covers the whole of London, and even records some cri
 ```{r select-features, echo=FALSE, fig.align='center'}
 knitr::include_graphics('images/w08/select.png')
 ```
-<br />*Please note that the **Select Features by Area or Single Click** button be located in a different place as it is in the GIF below.* <br /><br />
+<br />*Please note that the **Select Features by Area or Single Click** button may be located in a different place than it is in the GIF below.* <br /><br />
 - Press and hold the **Shift** button on your keyboard and click on Camden and Islington.
 - Right click on the `boroughs` layer in the **Layers** panel > **Export** > **Save Selected Features As ... **.
 - Set the **Format** to **Esri Shapefile**.
@@ -272,8 +272,20 @@ knitr::include_graphics('images/w08/ready_vis.png')
 ```
 
 ### Visualising data in QGIS {-}
+Based on the shapes of the streets and the outline of the street network, you may be able to recognise your allocated street. However, we can also add something called a *base map* layer. A base map is a layer with geographic information that serves as a background and is incredibly useful when you want to add some context to your map. We do need a little plugin to add this base map. We can do that as follows:
 
-## Worksheet {-}
+- Go to **Plugins** > **Manage and Install Plugins**.
+- Search for **QuickMapServices** and click on **Install plugin**.
+- Once the plugin is installed you can go to **Web** > **QuickMapServices** > **OSM** > **OSM Standard**. *OSM stands for [OpenStreetMap](https://www.openstreetmap.org/#map=6/54.910/-3.432). OpenStreetMap is a collaborative project to create a free editable geographic database of the world.* It may take a few seconds to load the base map.
+- Turn off the Camden and Islington map layer (`cam_is`) in the **Layers** panel by unticking it.
+
+You now have a view of the street data, pulled from OpenStreetMap, with the crime data drawn on top. The GIF below summarises these steps:
+
+```{r adding-basemap, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Adding a basemap layer. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_basemap.gif){target="_blank"}'}
+knitr::include_graphics('images/w08/add_basemap.gif')
+```
+
+## Worksheet {-} 
 Now you have worked through the steps in the computer tutorial on [downloading](#downloading-crime-data) and [mapping](#mapping-crime-data) crime data, you need to conduct the following analysis **as a group**:
 
 #### Part I: Camden and Islington {-} 

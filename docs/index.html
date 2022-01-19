@@ -407,7 +407,7 @@ Figure 25: All crime that is recorded in Camden and Islington in November 2021. 
 <li>Select the <code>boroughs</code> layer by clicking on it.</li>
 <li>Click on the <strong>Select Features by Area or Single Click</strong> button: <br /><br />
 <img src="images/w08/select.png" width="50" style="display: block; margin: auto;" />
-<br /><em>Please note that the <strong>Select Features by Area or Single Click</strong> button be located in a different place as it is in the GIF below.</em> <br /><br /></li>
+<br /><em>Please note that the <strong>Select Features by Area or Single Click</strong> button may be located in a different place than it is in the GIF below.</em> <br /><br /></li>
 <li>Press and hold the <strong>Shift</strong> button on your keyboard and click on Camden and Islington.</li>
 <li>Right click on the <code>boroughs</code> layer in the <strong>Layers</strong> panel &gt; <strong>Export</strong> &gt; <strong>Save Selected Features As … </strong>.</li>
 <li>Set the <strong>Format</strong> to <strong>Esri Shapefile</strong>.</li>
@@ -445,6 +445,20 @@ Figure 28: We are now ready to visualise our data. <a href="https://jtvandijk.gi
 </div>
 <div id="visualising-data-in-qgis" class="section level3 unnumbered hasAnchor">
 <h3>Visualising data in QGIS<a href="#visualising-data-in-qgis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Based on the shapes of the streets and the outline of the street network, you may be able to recognise your allocated street. However, we can also add something called a <em>base map</em> layer. A base map is a layer with geographic information that serves as a background and is incredibly useful when you want to add some context to your map. We do need a little plugin to add this base map. We can do that as follows:</p>
+<ul>
+<li>Go to <strong>Plugins</strong> &gt; <strong>Manage and Install Plugins</strong>.</li>
+<li>Search for <strong>QuickMapServices</strong> and click on <strong>Install plugin</strong>.</li>
+<li>Once the plugin is installed you can go to <strong>Web</strong> &gt; <strong>QuickMapServices</strong> &gt; <strong>OSM</strong> &gt; <strong>OSM Standard</strong>. <em>OSM stands for <a href="https://www.openstreetmap.org/#map=6/54.910/-3.432">OpenStreetMap</a>. OpenStreetMap is a collaborative project to create a free editable geographic database of the world.</em> It may take a few seconds to load the base map.</li>
+<li>Turn off the Camden and Islington map layer (<code>cam_is</code>) in the <strong>Layers</strong> panel by unticking it.</li>
+</ul>
+<p>You now have a view of the street data, pulled from OpenStreetMap, with the crime data drawn on top. The GIF below summarises these steps:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:adding-basemap"></span>
+<img src="images/w08/add_basemap.gif" alt="Adding a basemap layer. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_basemap.gif){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 29: Adding a basemap layer. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/add_basemap.gif" target="_blank">[Enlarge image]</a>
+</p>
+</div>
 </div>
 </div>
 <div id="worksheet" class="section level2 unnumbered hasAnchor">
