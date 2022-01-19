@@ -379,7 +379,7 @@ Now repeat these steps for our \texttt{boroughs} file, making sure again that in
 \subsection*{Organising our layers}\label{organising-our-layers}}
 \addcontentsline{toc}{subsection}{Organising our layers}
 
-Now we have our first set of data loaded, we can reorganise them a little. In the \textbf{Layers} panel, we can drag the \texttt{roads} layer on top of the \texttt{boroughs} layer to change their order. We can also zoom to a layer's full extent (right click on \texttt{roads} or \texttt{boroughs} \textgreater{} \textbf{Zoom to Layer}), change a layer's colour (right click on \texttt{roads} or \texttt{boroughs} \textgreater{} \textbf{Properties} \textgreater{} change the colour under the \textbf{Symbology} tab), and zoom in and out of the map by scrolling:
+Now we have our first set of data loaded, we can reorganise them a little. In the \textbf{Layers} panel, we can drag the \texttt{roads} layer on top of the \texttt{boroughs} layer to change their order. We can also zoom to a layer's full extent (right click on \texttt{roads} or \texttt{boroughs} \textgreater{} \textbf{Zoom to Layer}), change a layer's colour (right click on \texttt{roads} or \texttt{boroughs} \textgreater{} \textbf{Properties \ldots{}} \textgreater{} change the colour under the \textbf{Symbology} tab), and zoom in and out of the map by scrolling:
 
 \begin{figure}
 
@@ -587,6 +587,31 @@ You now have a view of the street data, pulled from OpenStreetMap, with the crim
 }
 
 \caption{Adding a basemap layer. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_basemap.gif){target="_blank"}}\label{fig:adding-basemap}
+\end{figure}
+
+The next thing we want to do is get some more insight into our crimes. As we know: the data records crime by type, so let's use this information in our visualisation:
+
+\begin{itemize}
+\tightlist
+\item
+  Right click on the \texttt{cam\_is\_clip} layer in the \textbf{Layers} panel and click on \textbf{Properties \ldots{}}. Here we can change the symbology of the layer.
+\item
+  At the top of the menu change \textbf{Single Symbol} to \textbf{Categorized}.
+\item
+  Click on the \textbf{Value} dropdown menu and select \texttt{Crime\ type}. \emph{Note that these are the columns that we have seen when we looked at the data in Excel.}
+\item
+  At the bottom of the menu click on \textbf{Classify}. All the different crime types now appear, with each their own symbol. Click \textbf{Apply} and click \textbf{OK}.
+\end{itemize}
+
+The QGIS screen now shows a colour for each crime type. The GIF below summarises these steps:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/colour_crime} 
+
+}
+
+\caption{Differentiating crime types. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/colour_crime.gif){target="_blank"}}\label{fig:colour-crimes}
 \end{figure}
 
 \hypertarget{worksheet}{%

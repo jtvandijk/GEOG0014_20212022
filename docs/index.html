@@ -300,7 +300,7 @@ Figure 20: Boroughs loaded. <a href="https://jtvandijk.github.io/GEOG0014/images
 </div>
 <div id="organising-our-layers" class="section level3 unnumbered hasAnchor">
 <h3>Organising our layers<a href="#organising-our-layers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Now we have our first set of data loaded, we can reorganise them a little. In the <strong>Layers</strong> panel, we can drag the <code>roads</code> layer on top of the <code>boroughs</code> layer to change their order. We can also zoom to a layer’s full extent (right click on <code>roads</code> or <code>boroughs</code> &gt; <strong>Zoom to Layer</strong>), change a layer’s colour (right click on <code>roads</code> or <code>boroughs</code> &gt; <strong>Properties</strong> &gt; change the colour under the <strong>Symbology</strong> tab), and zoom in and out of the map by scrolling:</p>
+<p>Now we have our first set of data loaded, we can reorganise them a little. In the <strong>Layers</strong> panel, we can drag the <code>roads</code> layer on top of the <code>boroughs</code> layer to change their order. We can also zoom to a layer’s full extent (right click on <code>roads</code> or <code>boroughs</code> &gt; <strong>Zoom to Layer</strong>), change a layer’s colour (right click on <code>roads</code> or <code>boroughs</code> &gt; <strong>Properties …</strong> &gt; change the colour under the <strong>Symbology</strong> tab), and zoom in and out of the map by scrolling:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:organise-data"></span>
 <img src="images/w08/organise_data.gif" alt="Organising the order of our data.. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
@@ -457,6 +457,20 @@ Figure 28: We are now ready to visualise our data. <a href="https://jtvandijk.gi
 <img src="images/w08/add_basemap.gif" alt="Adding a basemap layer. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_basemap.gif){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
 Figure 29: Adding a basemap layer. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/add_basemap.gif" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+<p>The next thing we want to do is get some more insight into our crimes. As we know: the data records crime by type, so let’s use this information in our visualisation:</p>
+<ul>
+<li>Right click on the <code>cam_is_clip</code> layer in the <strong>Layers</strong> panel and click on <strong>Properties …</strong>. Here we can change the symbology of the layer.</li>
+<li>At the top of the menu change <strong>Single Symbol</strong> to <strong>Categorized</strong>.</li>
+<li>Click on the <strong>Value</strong> dropdown menu and select <code>Crime type</code>. <em>Note that these are the columns that we have seen when we looked at the data in Excel.</em></li>
+<li>At the bottom of the menu click on <strong>Classify</strong>. All the different crime types now appear, with each their own symbol. Click <strong>Apply</strong> and click <strong>OK</strong>.</li>
+</ul>
+<p>The QGIS screen now shows a colour for each crime type. The GIF below summarises these steps:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:colour-crimes"></span>
+<img src="images/w08/colour_crime.gif" alt="Differentiating crime types. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/colour_crime.gif){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 30: Differentiating crime types. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/colour_crime.gif" target="_blank">[Enlarge image]</a>
 </p>
 </div>
 </div>

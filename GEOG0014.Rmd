@@ -170,7 +170,7 @@ knitr::include_graphics('images/w08/bor_loaded.png')
 ```
 
 ### Organising our layers {-}
-Now we have our first set of data loaded, we can reorganise them a little. In the **Layers** panel, we can drag the `roads` layer on top of the `boroughs` layer to change their order. We can also zoom to a layer's full extent (right click on `roads` or `boroughs` > **Zoom to Layer**), change a layer's colour (right click on `roads` or `boroughs` > **Properties** > change the colour under the **Symbology** tab), and zoom in and out of the map by scrolling:
+Now we have our first set of data loaded, we can reorganise them a little. In the **Layers** panel, we can drag the `roads` layer on top of the `boroughs` layer to change their order. We can also zoom to a layer's full extent (right click on `roads` or `boroughs` > **Zoom to Layer**), change a layer's colour (right click on `roads` or `boroughs` > **Properties ...** > change the colour under the **Symbology** tab), and zoom in and out of the map by scrolling:
 
 ```{r organise-data, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Organising the order of our data.. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif){target="_blank"}'}
 knitr::include_graphics('images/w08/organise_data.gif')
@@ -284,6 +284,22 @@ You now have a view of the street data, pulled from OpenStreetMap, with the crim
 ```{r adding-basemap, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Adding a basemap layer. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_basemap.gif){target="_blank"}'}
 knitr::include_graphics('images/w08/add_basemap.gif')
 ```
+
+The next thing we want to do is get some more insight into our crimes. As we know: the data records crime by type, so let's use this information in our visualisation:
+
+- Right click on the `cam_is_clip` layer in the **Layers** panel and click on **Properties ...**. Here we can change the symbology of the layer.
+- At the top of the menu change **Single Symbol** to **Categorized**.
+- Click on the **Value** dropdown menu and select `Crime type`. *Note that these are the columns that we have seen when we looked at the data in Excel.*
+- At the bottom of the menu click on **Classify**. All the different crime types now appear, with each their own symbol. Click **Apply** and click **OK**.
+
+The QGIS screen now shows a colour for each crime type. The GIF below summarises these steps:
+
+```{r colour-crimes, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Differentiating crime types. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/colour_crime.gif){target="_blank"}'}
+knitr::include_graphics('images/w08/colour_crime.gif')
+```
+
+
+
 
 ## Worksheet {-} 
 Now you have worked through the steps in the computer tutorial on [downloading](#downloading-crime-data) and [mapping](#mapping-crime-data) crime data, you need to conduct the following analysis **as a group**:
