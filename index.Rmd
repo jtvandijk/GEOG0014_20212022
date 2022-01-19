@@ -86,7 +86,7 @@ Save the file as `crime_met_november2021` in your `Downloads` folder.
 knitr::include_graphics('images/w08/save_now.png')
 ```
 
-Your download should be finished within seconds. After downloading the data, go to your `Downloads` folder and right click on the `crime_met_november2021.zip` folder and click on **Extract All**. The data, which is in a compressed format (`zip`), will now be uncompressed so that we can use it within QGIS.
+Your download should be finished within seconds. After downloading the data, go to your `Downloads` folder and right click on the `crime_met_november2021.zip` folder and click on **Extract All**. The data, which is in a compressed format (`zip`), will now be extracted so that we can use it within QGIS.
 
 ```{r data-police-unzip, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Unzip the data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/extract_zip.png){target="_blank"}'}
 knitr::include_graphics('images/w08/extract_zip.png')
@@ -110,7 +110,7 @@ knitr::include_graphics('images/w08/save_as_save.png')
 
 Right click on on the second file and click on **Save link as ...**. Give the file the name `boroughs` and save to your download folder.
 
-After downloading both files, go to your `Downloads` folder and make sure both are uncompressed. Your `Downloads` folder should look something like this:
+After downloading both files, go to your `Downloads` folder and make sure both are extracted. Your `Downloads` folder should look something like this:
 
 ```{r your-downloads, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Your download folder should now contain three **unzipped** folders containing our crime data, our borough data and our road data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/all_download.png){target="_blank"}'}
 knitr::include_graphics('images/w08/all_download.png')
@@ -124,7 +124,64 @@ knitr::include_graphics('images/w08/wd.png')
 
 We are now ready to move to mapping in QGIS.
 
+:::note
+**Note** <br/>
+The `roads` and `boroughs` file that we downloaded is something called a `shapefile.` A `shapefile` is a file that GIS software uses to store spatial data. In the case of a shapefile this is in actual fact a misnomer because a `shapefile` consists of a **collection of files**. Without going into detail: each of these files does something slightly different and the the software we will be using requires needs all of them in order to understand the data.
+:::
+
 ## Mapping crime data {-}
+Now we have downloaded and organised our data, we can open QGIS. QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the taskbar, type in QGIS and click on **QGIS Desktop 3.16** to open the software. **Make sure you do not open QGIS 2.18 as the steps in this tutorial will not work!**. 
+
+```{r open-qgis, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Open **QGIS Desktop 3.16.11**. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/open_qgis.png){target="_blank"}'}
+knitr::include_graphics('images/w08/open_qgis.png')
+```
+
+It may take a little while before QGIS has started, so be patient. Once opened, you will see the QGIS interface:
+
+```{r interface-qgis, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='The QGIS interface. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/interface.png){target="_blank"}'}
+knitr::include_graphics('images/w08/interface.png')
+```
+
+On the left hand sizes you see two panels: **Layers** and **Browser**. We do not really need the second one, so you can close it by clicking on the `x`. 
+
+### Adding data {-}
+We can now start by adding our data. We will start by adding our `roads`. Click on **Layer** > **Add Layer** > **Add Vector Layer ...**. 
+
+```{r add-vector, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Adding vector data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_vector.png){target="_blank"}'}
+knitr::include_graphics('images/w08/add_vector.png')
+```
+
+Click on the three dots (**...**) next tot the **Vector Dataset(s)** box and navigate to your *working directory*. Then go into your `roads` folder and click on the roads file with the `SHP File` type. This is the roads `shapefile` that we want.
+
+```{r add-shp, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Loading the roads shapefile. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_shp.png){target="_blank"}'}
+knitr::include_graphics('images/w08/add_shp.png')
+```
+
+Click **Open**. Then click **Add**. If you get a messsage popping up saying something about "Select Transformations for raods" just click on **OK**. **Close** the dialog box. You should now see the road network of Camden and Islington loaded:
+
+```{r roads-loaded, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Roads loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/roads_loaded.png){target="_blank"}'}
+knitr::include_graphics('images/w08/roads_loaded.png')
+```
+
+Now repeat these steps for our `boroughs` file, making sure again that inside your `boroughs` folder you select the boroughs file with the `SHP File` type. You now will have both data loaded, although the `boroughs` layer will be drawn on top of your `roads` layer. Another thing to note is that the colours of your `roads` and `boroughs` file may be different than the ones in the image - QGIS randomly picks a colour when a map layer is first loaded.
+
+```{r bor-loaded, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Boroughs loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/bor_loaded.png){target="_blank"}'}
+knitr::include_graphics('images/w08/bor_loaded.png')
+```
+
+### Organising data {-}
+Now we have our first set of data loaded, we can reorganise them a little. In the **Layers** panel, we can drag the `roads` layer on top of the `boroughs` layer. We can also zoom to a layer's full extent (right click on `layer` > **Zoom to Layer**), change change their colours (right click on `layer` > **Properties** > change the colour under the **Symbology** tab), and zoom in and out by scrolling:
+
+```{r organise-data, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Boroughs loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif){target="_blank"}'}
+knitr::include_graphics('images/w08/organise_data.gif')
+```
+
+Before doing anything else, it would be a good idea to now save our QGIS project. Go to **File** > **Save** and save your file in your *working directory* as `crime_map`.
+
+```{r save-project, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Saving your QGIs project. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png){target="_blank"}'}
+knitr::include_graphics('images/w08/save_project.png')
+```
+
 
 ## Worksheet {-}
 Now you have worked through the steps in the computer tutorial on [downloading](#downloading-crime-data) and [mapping](#mapping-crime-data) crime data, you should do the following **as a group**:

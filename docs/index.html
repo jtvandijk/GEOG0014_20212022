@@ -82,7 +82,11 @@
 <li><a href="#this-week">This week<span></span></a></li>
 <li><a href="#getting-started">Getting started<span></span></a></li>
 <li><a href="#downloading-crime-data">Downloading crime data<span></span></a></li>
-<li><a href="#mapping-crime-data">Mapping crime data<span></span></a></li>
+<li><a href="#mapping-crime-data">Mapping crime data<span></span></a>
+<ul>
+<li><a href="#adding-data">Adding data<span></span></a></li>
+<li><a href="#organising-data">Organising data<span></span></a></li>
+</ul></li>
 <li><a href="#worksheet">Worksheet<span></span></a></li>
 <li><a href="#submission">Submission<span></span></a></li>
 </ul></li>
@@ -194,7 +198,7 @@ Figure 7: Download the data. <a href="https://jtvandijk.github.io/GEOG0014/image
 Figure 8: Save the data. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/save_now.png" target="_blank">[Enlarge image]</a>
 </p>
 </div>
-<p>Your download should be finished within seconds. After downloading the data, go to your <code>Downloads</code> folder and right click on the <code>crime_met_november2021.zip</code> folder and click on <strong>Extract All</strong>. The data, which is in a compressed format (<code>zip</code>), will now be uncompressed so that we can use it within QGIS.</p>
+<p>Your download should be finished within seconds. After downloading the data, go to your <code>Downloads</code> folder and right click on the <code>crime_met_november2021.zip</code> folder and click on <strong>Extract All</strong>. The data, which is in a compressed format (<code>zip</code>), will now be extracted so that we can use it within QGIS.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:data-police-unzip"></span>
 <img src="images/w08/extract_zip.png" alt="Unzip the data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/extract_zip.png){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
@@ -222,7 +226,7 @@ Figure 12: Save file in your downloads folder. <a href="https://jtvandijk.github
 </p>
 </div>
 <p>Right click on on the second file and click on <strong>Save link as …</strong>. Give the file the name <code>boroughs</code> and save to your download folder.</p>
-<p>After downloading both files, go to your <code>Downloads</code> folder and make sure both are uncompressed. Your <code>Downloads</code> folder should look something like this:</p>
+<p>After downloading both files, go to your <code>Downloads</code> folder and make sure both are extracted. Your <code>Downloads</code> folder should look something like this:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:your-downloads"></span>
 <img src="images/w08/all_download.png" alt="Your download folder should now contain three **unzipped** folders containing our crime data, our borough data and our road data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/all_download.png){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
@@ -237,9 +241,76 @@ Figure 14: Your working directory is now all set up. <a href="https://jtvandijk.
 </p>
 </div>
 <p>We are now ready to move to mapping in QGIS.</p>
+<div class="note">
+<p><strong>Note</strong> <br/>
+The <code>roads</code> and <code>boroughs</code> file that we downloaded is something called a <code>shapefile.</code> A <code>shapefile</code> is a file that GIS software uses to store spatial data. In the case of a shapefile this is in actual fact a misnomer because a <code>shapefile</code> consists of a <strong>collection of files</strong>. Without going into detail: each of these files does something slightly different and the the software we will be using requires needs all of them in order to understand the data.</p>
+</div>
 </div>
 <div id="mapping-crime-data" class="section level2 unnumbered hasAnchor">
 <h2>Mapping crime data<a href="#mapping-crime-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now we have downloaded and organised our data, we can open QGIS. QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the taskbar, type in QGIS and click on <strong>QGIS Desktop 3.16</strong> to open the software. <strong>Make sure you do not open QGIS 2.18 as the steps in this tutorial will not work!</strong>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:open-qgis"></span>
+<img src="images/w08/open_qgis.png" alt="Open **QGIS Desktop 3.16.11**. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/open_qgis.png){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 15: Open <strong>QGIS Desktop 3.16.11</strong>. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/open_qgis.png" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+<p>It may take a little while before QGIS has started, so be patient. Once opened, you will see the QGIS interface:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:interface-qgis"></span>
+<img src="images/w08/interface.png" alt="The QGIS interface. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/interface.png){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 16: The QGIS interface. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/interface.png" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+<p>On the left hand sizes you see two panels: <strong>Layers</strong> and <strong>Browser</strong>. We do not really need the second one, so you can close it by clicking on the <code>x</code>.</p>
+<div id="adding-data" class="section level3 unnumbered hasAnchor">
+<h3>Adding data<a href="#adding-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can now start by adding our data. We will start by adding our <code>roads</code>. Click on <strong>Layer</strong> &gt; <strong>Add Layer</strong> &gt; <strong>Add Vector Layer …</strong>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:add-vector"></span>
+<img src="images/w08/add_vector.png" alt="Adding vector data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_vector.png){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 17: Adding vector data. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/add_vector.png" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+<p>Click on the three dots (<strong>…</strong>) next tot the <strong>Vector Dataset(s)</strong> box and navigate to your <em>working directory</em>. Then go into your <code>roads</code> folder and click on the roads file with the <code>SHP File</code> type. This is the roads <code>shapefile</code> that we want.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:add-shp"></span>
+<img src="images/w08/add_shp.png" alt="Loading the roads shapefile. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_shp.png){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 18: Loading the roads shapefile. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/add_shp.png" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+<p>Click <strong>Open</strong>. Then click <strong>Add</strong>. If you get a messsage popping up saying something about “Select Transformations for raods” just click on <strong>OK</strong>. <strong>Close</strong> the dialog box. You should now see the road network of Camden and Islington loaded:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:roads-loaded"></span>
+<img src="images/w08/roads_loaded.png" alt="Roads loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/roads_loaded.png){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 19: Roads loaded. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/roads_loaded.png" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+<p>Now repeat these steps for our <code>boroughs</code> file, making sure again that inside your <code>boroughs</code> folder you select the boroughs file with the <code>SHP File</code> type. You now will have both data loaded, although the <code>boroughs</code> layer will be drawn on top of your <code>roads</code> layer. Another thing to note is that the colours of your <code>roads</code> and <code>boroughs</code> file may be different than the ones in the image - QGIS randomly picks a colour when a map layer is first loaded.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bor-loaded"></span>
+<img src="images/w08/bor_loaded.png" alt="Boroughs loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/bor_loaded.png){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 20: Boroughs loaded. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/bor_loaded.png" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+</div>
+<div id="organising-data" class="section level3 unnumbered hasAnchor">
+<h3>Organising data<a href="#organising-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now we have our first set of data loaded, we can reorganise them a little. In the <strong>Layers</strong> panel, we can drag the <code>roads</code> layer on top of the <code>boroughs</code> layer. We can also zoom to a layer’s full extent (right click on <code>layer</code> &gt; <strong>Zoom to Layer</strong>), change change their colours (right click on <code>layer</code> &gt; <strong>Properties</strong> &gt; change the colour under the <strong>Symbology</strong> tab), and zoom in and out by scrolling:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:organise-data"></span>
+<img src="images/w08/organise_data.gif" alt="Boroughs loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 21: Boroughs loaded. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+<p>Before doing anything else, it would be a good idea to now save our QGIS project. Go to <strong>File</strong> &gt; <strong>Save</strong> and save your file in your <em>working directory</em> as <code>crime_map</code>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:save-project"></span>
+<img src="images/w08/save_project.png" alt="Saving your QGIs project. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 22: Saving your QGIs project. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+</div>
 </div>
 <div id="worksheet" class="section level2 unnumbered hasAnchor">
 <h2>Worksheet<a href="#worksheet" class="anchor-section" aria-label="Anchor link to header"></a></h2>

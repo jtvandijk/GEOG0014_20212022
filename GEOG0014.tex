@@ -228,7 +228,7 @@ Save the file as \texttt{crime\_met\_november2021} in your \texttt{Downloads} fo
 \caption{Save the data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_now.png){target="_blank"}}\label{fig:data-police-save}
 \end{figure}
 
-Your download should be finished within seconds. After downloading the data, go to your \texttt{Downloads} folder and right click on the \texttt{crime\_met\_november2021.zip} folder and click on \textbf{Extract All}. The data, which is in a compressed format (\texttt{zip}), will now be uncompressed so that we can use it within QGIS.
+Your download should be finished within seconds. After downloading the data, go to your \texttt{Downloads} folder and right click on the \texttt{crime\_met\_november2021.zip} folder and click on \textbf{Extract All}. The data, which is in a compressed format (\texttt{zip}), will now be extracted so that we can use it within QGIS.
 
 \begin{figure}
 
@@ -272,7 +272,7 @@ Under the \textbf{Further resources} heading you will see two files: \texttt{Roa
 
 Right click on on the second file and click on \textbf{Save link as \ldots{}}. Give the file the name \texttt{boroughs} and save to your download folder.
 
-After downloading both files, go to your \texttt{Downloads} folder and make sure both are uncompressed. Your \texttt{Downloads} folder should look something like this:
+After downloading both files, go to your \texttt{Downloads} folder and make sure both are extracted. Your \texttt{Downloads} folder should look something like this:
 
 \begin{figure}
 
@@ -296,9 +296,110 @@ The final step we need to take is to copy our downloaded data to a new folder. I
 
 We are now ready to move to mapping in QGIS.
 
+\textbf{Note}
+The \texttt{roads} and \texttt{boroughs} file that we downloaded is something called a \texttt{shapefile.} A \texttt{shapefile} is a file that GIS software uses to store spatial data. In the case of a shapefile this is in actual fact a misnomer because a \texttt{shapefile} consists of a \textbf{collection of files}. Without going into detail: each of these files does something slightly different and the the software we will be using requires needs all of them in order to understand the data.
+
 \hypertarget{mapping-crime-data}{%
 \section*{Mapping crime data}\label{mapping-crime-data}}
 \addcontentsline{toc}{section}{Mapping crime data}
+
+Now we have downloaded and organised our data, we can open QGIS. QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the taskbar, type in QGIS and click on \textbf{QGIS Desktop 3.16} to open the software. \textbf{Make sure you do not open QGIS 2.18 as the steps in this tutorial will not work!}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/open_qgis} 
+
+}
+
+\caption{Open **QGIS Desktop 3.16.11**. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/open_qgis.png){target="_blank"}}\label{fig:open-qgis}
+\end{figure}
+
+It may take a little while before QGIS has started, so be patient. Once opened, you will see the QGIS interface:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/interface} 
+
+}
+
+\caption{The QGIS interface. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/interface.png){target="_blank"}}\label{fig:interface-qgis}
+\end{figure}
+
+On the left hand sizes you see two panels: \textbf{Layers} and \textbf{Browser}. We do not really need the second one, so you can close it by clicking on the \texttt{x}.
+
+\hypertarget{adding-data}{%
+\subsection*{Adding data}\label{adding-data}}
+\addcontentsline{toc}{subsection}{Adding data}
+
+We can now start by adding our data. We will start by adding our \texttt{roads}. Click on \textbf{Layer} \textgreater{} \textbf{Add Layer} \textgreater{} \textbf{Add Vector Layer \ldots{}}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/add_vector} 
+
+}
+
+\caption{Adding vector data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_vector.png){target="_blank"}}\label{fig:add-vector}
+\end{figure}
+
+Click on the three dots (\textbf{\ldots{}}) next tot the \textbf{Vector Dataset(s)} box and navigate to your \emph{working directory}. Then go into your \texttt{roads} folder and click on the roads file with the \texttt{SHP\ File} type. This is the roads \texttt{shapefile} that we want.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/add_shp} 
+
+}
+
+\caption{Loading the roads shapefile. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_shp.png){target="_blank"}}\label{fig:add-shp}
+\end{figure}
+
+Click \textbf{Open}. Then click \textbf{Add}. If you get a messsage popping up saying something about ``Select Transformations for raods'' just click on \textbf{OK}. \textbf{Close} the dialog box. You should now see the road network of Camden and Islington loaded:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/roads_loaded} 
+
+}
+
+\caption{Roads loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/roads_loaded.png){target="_blank"}}\label{fig:roads-loaded}
+\end{figure}
+
+Now repeat these steps for our \texttt{boroughs} file, making sure again that inside your \texttt{boroughs} folder you select the boroughs file with the \texttt{SHP\ File} type. You now will have both data loaded, although the \texttt{boroughs} layer will be drawn on top of your \texttt{roads} layer. Another thing to note is that the colours of your \texttt{roads} and \texttt{boroughs} file may be different than the ones in the image - QGIS randomly picks a colour when a map layer is first loaded.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/bor_loaded} 
+
+}
+
+\caption{Boroughs loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/bor_loaded.png){target="_blank"}}\label{fig:bor-loaded}
+\end{figure}
+
+\hypertarget{organising-data}{%
+\subsection*{Organising data}\label{organising-data}}
+\addcontentsline{toc}{subsection}{Organising data}
+
+Now we have our first set of data loaded, we can reorganise them a little. In the \textbf{Layers} panel, we can drag the \texttt{roads} layer on top of the \texttt{boroughs} layer. We can also zoom to a layer's full extent (right click on \texttt{layer} \textgreater{} \textbf{Zoom to Layer}), change change their colours (right click on \texttt{layer} \textgreater{} \textbf{Properties} \textgreater{} change the colour under the \textbf{Symbology} tab), and zoom in and out by scrolling:
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/organise_data} 
+
+}
+
+\caption{Boroughs loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif){target="_blank"}}\label{fig:organise-data}
+\end{figure}
+
+Before doing anything else, it would be a good idea to now save our QGIS project. Go to \textbf{File} \textgreater{} \textbf{Save} and save your file in your \emph{working directory} as \texttt{crime\_map}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/save_project} 
+
+}
+
+\caption{Saving your QGIs project. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png){target="_blank"}}\label{fig:save-project}
+\end{figure}
 
 \hypertarget{worksheet}{%
 \section*{Worksheet}\label{worksheet}}

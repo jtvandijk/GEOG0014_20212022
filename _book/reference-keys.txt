@@ -12,3 +12,12 @@ fig:moodle-w8-save
 fig:moodle-w8-save-save
 fig:your-downloads
 fig:wd
+fig:open-qgis
+fig:interface-qgis
+fig:add-vector
+fig:add-shp
+fig:roads-loaded
+fig:bor-loaded
+organising-data
+fig:organise-data
+fig:save-project
