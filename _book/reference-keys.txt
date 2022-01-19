@@ -18,6 +18,7 @@ fig:add-vector
 fig:add-shp
 fig:roads-loaded
 fig:bor-loaded
-organising-data
 fig:organise-data
 fig:save-project
+fig:inspect-data
+inspecting-our-crime-data

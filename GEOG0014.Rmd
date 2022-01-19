@@ -157,7 +157,7 @@ Click on the three dots (**...**) next tot the **Vector Dataset(s)** box and nav
 knitr::include_graphics('images/w08/add_shp.png')
 ```
 
-Click **Open**. Then click **Add**. If you get a messsage popping up saying something about "Select Transformations for raods" just click on **OK**. **Close** the dialog box. You should now see the road network of Camden and Islington loaded:
+Click **Open**. Then click **Add**. If you get a messsage popping up saying something about "Select Transformations for roads" just click on **OK**. Now **Close** the dialog box. You should now see the road network of Camden and Islington loaded:
 
 ```{r roads-loaded, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Roads loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/roads_loaded.png){target="_blank"}'}
 knitr::include_graphics('images/w08/roads_loaded.png')
@@ -169,43 +169,73 @@ Now repeat these steps for our `boroughs` file, making sure again that inside yo
 knitr::include_graphics('images/w08/bor_loaded.png')
 ```
 
-### Organising data {-}
-Now we have our first set of data loaded, we can reorganise them a little. In the **Layers** panel, we can drag the `roads` layer on top of the `boroughs` layer. We can also zoom to a layer's full extent (right click on `layer` > **Zoom to Layer**), change change their colours (right click on `layer` > **Properties** > change the colour under the **Symbology** tab), and zoom in and out by scrolling:
+### Organising our layers {-}
+Now we have our first set of data loaded, we can reorganise them a little. In the **Layers** panel, we can drag the `roads` layer on top of the `boroughs` layer to change their order. We can also zoom to a layer's full extent (right click on `roads` or `boroughs` > **Zoom to Layer**), change a layer's colour (right click on `roads` or `boroughs` > **Properties** > change the colour under the **Symbology** tab), and zoom in and out of the map by scrolling:
 
-```{r organise-data, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Boroughs loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif){target="_blank"}'}
+```{r organise-data, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Organising the order of our data.. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif){target="_blank"}'}
 knitr::include_graphics('images/w08/organise_data.gif')
 ```
 
-Before doing anything else, it would be a good idea to now save our QGIS project. Go to **File** > **Save** and save your file in your *working directory* as `crime_map`.
+Before doing anything else, now would be a good time to save our QGIS project. Go to **File** > **Save as** and save your file in your *working directory* as `crime_map`.
 
 ```{r save-project, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Saving your QGIs project. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png){target="_blank"}'}
 knitr::include_graphics('images/w08/save_project.png')
 ```
 
+### Inspecting crime data in Excel {-}
+The next thing we want to do is have a closer look at the crime data that we downloaded before loading them too in QGIS. 
+
+:::note
+**Note** <br />
+The crime file that we downloaded is in a so-called `csv` format. `csv` stands for comma (or character) separated values. A `csv` fiile can be thought of as stripped down Excel spreadsheets in which every column of data is separated by a comma. If you open a `csv` file witin Excel, however, it will look "normal".
+:::
+
+Navigate to your `working directory` and go to `crime_met_november2021` > `2021_11`. Now open the `2011-11-metropolitan-street` file using Excel. 
+
+```{r inspect-data, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Inspecting our crime data `csv`. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/inspect_data.gif){target="_blank"}'}
+knitr::include_graphics('images/w08/inspect_data.gif')
+```
+
+Besides a column containing a unique `Crime ID` as well as the `Month` in which the crime has been recorded, our crime data set contains several other columns of data:
+
+| Column | Meaning |
+| :---------- | :---------------------- |
+| `Reported by` |	The force that provided the data about the crime. |
+| `Falls within` |	The area in which the crime was recorded. |
+| `Longitude and Latitude` |	The anonymised coordinates of the crime. |
+| `LSOA code and LSOA name` |	References to the Lower Layer Super Output Area that the anonymised point falls into, according to the LSOA boundaries provided by the Office for National Statistics. |
+| `Crime type` | One of the crime types used to categorise the offence. |
+| `Last outcome category` |	A reference to whichever of the outcomes associated with the crime occurred most recently. |  
+| `Context` |	A field provided for forces to provide additional human-readable data about individual crimes. |
+
+For us, the main fields we are interested include `Longitude` and `Latitude` (for plotting the crimes in QGIS) as well as `Crime Type` (to filter crime based on type of crime). After inspecting the data, you can close Excel again. Make sure that you do **not** save the file.
+
+### Loading crime data into QGIS {-}
+
 
 ## Worksheet {-}
-Now you have worked through the steps in the computer tutorial on [downloading](#downloading-crime-data) and [mapping](#mapping-crime-data) crime data, you should do the following **as a group**:
+Now you have worked through the steps in the computer tutorial on [downloading](#downloading-crime-data) and [mapping](#mapping-crime-data) crime data, you need to conduct the following analysis **as a group**:
 
-#### Analysing macro patterns {-} 
+#### Part I: Camden and Islington {-} 
 :::note
 This concerns *anti-social behaviour* and *bicycle theft* in Camden and Islington.
 :::
 
 1.	Using what you have learnt in the computer tutorial to create two heat maps for **Camden and Islington**. The first of **anti-social behaviour** and the second of **bicycle theft**.
-2.	There are a number of crime **hot spots** for **anti-social behaviour** and **bicycle theft** that appear near UCL (particularly around Kings Cross Station).  Visit one of these areas (**during daylight hours**) and note down the features that distinguish them from their surrounding lower crime areas. *You may use two sides of your field notebook for your observations.*
+2.	There are a number of crime **hot spots** for **anti-social behaviour** and **bicycle theft** that appear near UCL (particularly around Kings Cross Station).  Visit one of these areas (**during daylight hours**) and note down the features that distinguish them from their surrounding lower crime areas. *You may use two sides of your field notebook for your observations.* If you want to, you can take pictures to add to your report.
 
-#### Analysing macro patterns {-} 
+#### Part II: Your allocated street {-} 
 :::note
 This concerns *all types* of crime in your allocated street.
 :::
 
 3.	Using the full crime data set, zoom in on the street you have been allocated. What is the dominant type of crime on this street and its surrounding area in **November 2021**?
-4.	Revisit the [data.police.uk](https://data.police.uk/) website and create a heatmap for all crime around your street in **December 2019** and **December 2020**. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types differ over the course of the years?
+4.	Revisit the [data.police.uk](https://data.police.uk/) website and create a heatmap for all crime around your street in **November 2019** and **November 2020**. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types differ over the course of the years?
 5.	Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross what other data sets might be useful to analyse crime in London?
 6.	Do you think the chances of falling victim of crime are higher or lower in the crime hotspots, how might you measure this? 
 
 ## Submission {-}
-Please submit your answers to the questions above in a short **group** report: no more than **500** words, a maximum of **4** maps, and **2** photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on [Moodle](https://moodle.ucl.ac.uk/course/view.php?id=23839); one submission per group. [That is it for this week's Geography in the Field!](https://www.youtube.com/watch?v=h_D3VFfhvs4)
+Please submit your answers to the questions above in a short **group** report: no more than **500** words, a maximum of **4** maps, and, if using, **2** photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on [Moodle](https://moodle.ucl.ac.uk/course/view.php?id=23839); one submission per group. [That is it for this week's Geography in the Field!](https://www.youtube.com/watch?v=h_D3VFfhvs4)
 
 <!--chapter:end:index.Rmd-->
 

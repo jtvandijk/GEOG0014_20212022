@@ -85,7 +85,9 @@
 <li><a href="#mapping-crime-data">Mapping crime data<span></span></a>
 <ul>
 <li><a href="#adding-data">Adding data<span></span></a></li>
-<li><a href="#organising-data">Organising data<span></span></a></li>
+<li><a href="#organising-our-layers">Organising our layers<span></span></a></li>
+<li><a href="#inspecting-our-crime-data">Inspecting our crime data<span></span></a></li>
+<li><a href="#loading-our-crime-data-into-qgis">Loading our crime data into QGIS<span></span></a></li>
 </ul></li>
 <li><a href="#worksheet">Worksheet<span></span></a></li>
 <li><a href="#submission">Submission<span></span></a></li>
@@ -279,7 +281,7 @@ Figure 17: Adding vector data. <a href="https://jtvandijk.github.io/GEOG0014/ima
 Figure 18: Loading the roads shapefile. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/add_shp.png" target="_blank">[Enlarge image]</a>
 </p>
 </div>
-<p>Click <strong>Open</strong>. Then click <strong>Add</strong>. If you get a messsage popping up saying something about “Select Transformations for raods” just click on <strong>OK</strong>. <strong>Close</strong> the dialog box. You should now see the road network of Camden and Islington loaded:</p>
+<p>Click <strong>Open</strong>. Then click <strong>Add</strong>. If you get a messsage popping up saying something about “Select Transformations for roads” just click on <strong>OK</strong>. Now <strong>Close</strong> the dialog box. You should now see the road network of Camden and Islington loaded:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:roads-loaded"></span>
 <img src="images/w08/roads_loaded.png" alt="Roads loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/roads_loaded.png){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
@@ -294,16 +296,16 @@ Figure 20: Boroughs loaded. <a href="https://jtvandijk.github.io/GEOG0014/images
 </p>
 </div>
 </div>
-<div id="organising-data" class="section level3 unnumbered hasAnchor">
-<h3>Organising data<a href="#organising-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Now we have our first set of data loaded, we can reorganise them a little. In the <strong>Layers</strong> panel, we can drag the <code>roads</code> layer on top of the <code>boroughs</code> layer. We can also zoom to a layer’s full extent (right click on <code>layer</code> &gt; <strong>Zoom to Layer</strong>), change change their colours (right click on <code>layer</code> &gt; <strong>Properties</strong> &gt; change the colour under the <strong>Symbology</strong> tab), and zoom in and out by scrolling:</p>
+<div id="organising-our-layers" class="section level3 unnumbered hasAnchor">
+<h3>Organising our layers<a href="#organising-our-layers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now we have our first set of data loaded, we can reorganise them a little. In the <strong>Layers</strong> panel, we can drag the <code>roads</code> layer on top of the <code>boroughs</code> layer to change their order. We can also zoom to a layer’s full extent (right click on <code>roads</code> or <code>boroughs</code> &gt; <strong>Zoom to Layer</strong>), change a layer’s colour (right click on <code>roads</code> or <code>boroughs</code> &gt; <strong>Properties</strong> &gt; change the colour under the <strong>Symbology</strong> tab), and zoom in and out of the map by scrolling:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:organise-data"></span>
-<img src="images/w08/organise_data.gif" alt="Boroughs loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif){target=&quot;_blank&quot;}" width="850pt" />
+<img src="images/w08/organise_data.gif" alt="Organising the order of our data.. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
-Figure 21: Boroughs loaded. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif" target="_blank">[Enlarge image]</a>
+Figure 21: Organising the order of our data.. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif" target="_blank">[Enlarge image]</a>
 </p>
 </div>
-<p>Before doing anything else, it would be a good idea to now save our QGIS project. Go to <strong>File</strong> &gt; <strong>Save</strong> and save your file in your <em>working directory</em> as <code>crime_map</code>.</p>
+<p>Before doing anything else, now would be a good time to save our QGIS project. Go to <strong>File</strong> &gt; <strong>Save as</strong> and save your file in your <em>working directory</em> as <code>crime_map</code>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:save-project"></span>
 <img src="images/w08/save_project.png" alt="Saving your QGIs project. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
@@ -311,28 +313,91 @@ Figure 22: Saving your QGIs project. <a href="https://jtvandijk.github.io/GEOG00
 </p>
 </div>
 </div>
+<div id="inspecting-our-crime-data" class="section level3 unnumbered hasAnchor">
+<h3>Inspecting our crime data<a href="#inspecting-our-crime-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The next thing we want to do is have a closer look at the crime data that we downloaded before loading them too in QGIS.</p>
+<div class="note">
+<p><strong>Note</strong> <br />
+The crime file that we downloaded is in a so-called <code>csv</code> format. <code>csv</code> stands for comma (or character) separated values. A <code>csv</code> fiile can be thought of as stripped down Excel spreadsheets in which every column of data is separated by a comma. If you open a <code>csv</code> file witin Excel, however, it will look “normal”.</p>
+</div>
+<p>Navigate to your <code>working directory</code> and go to <code>crime_met_november2021</code> &gt; <code>2021_11</code>. Now open the <code>2011-11-metropolitan-street</code> file using Excel.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:inspect-data"></span>
+<img src="images/w08/inspect_data.gif" alt="Inspecting our crime data `csv`. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/inspect_data.gif){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 23: Inspecting our crime data <code>csv</code>. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/inspect_data.gif" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+<p>Besides a column containing a unique <code>Crime ID</code> as well as the <code>Month</code> in which the crime has been recorded, our crime data set contains several other columns of data:</p>
+<table>
+<colgroup>
+<col width="32%" />
+<col width="67%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Column</th>
+<th align="left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>Reported by</code></td>
+<td align="left">The force that provided the data about the crime.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>Falls within</code></td>
+<td align="left">The area in which the crime was recorded.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>Longitude and Latitude</code></td>
+<td align="left">The anonymised coordinates of the crime.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>LSOA code and LSOA name</code></td>
+<td align="left">References to the Lower Layer Super Output Area that the anonymised point falls into, according to the LSOA boundaries provided by the Office for National Statistics.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>Crime type</code></td>
+<td align="left">One of the crime types used to categorise the offence.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>Last outcome category</code></td>
+<td align="left">A reference to whichever of the outcomes associated with the crime occurred most recently.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>Context</code></td>
+<td align="left">A field provided for forces to provide additional human-readable data about individual crimes.</td>
+</tr>
+</tbody>
+</table>
+<p>For us, the main fields we are interested include <code>Longitude</code> and <code>Latitude</code> (for plotting the crimes in QGIS) as well as <code>Crime Type</code> (to filter crime based on type of crime). After inspecting the data, you can close Excel again. Make sure that you do <strong>not</strong> save the file.</p>
+</div>
+<div id="loading-our-crime-data-into-qgis" class="section level3 unnumbered hasAnchor">
+<h3>Loading our crime data into QGIS<a href="#loading-our-crime-data-into-qgis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now</p>
+</div>
 </div>
 <div id="worksheet" class="section level2 unnumbered hasAnchor">
 <h2>Worksheet<a href="#worksheet" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Now you have worked through the steps in the computer tutorial on <a href="#downloading-crime-data">downloading</a> and <a href="#mapping-crime-data">mapping</a> crime data, you should do the following <strong>as a group</strong>:</p>
-<div id="analysing-macro-patterns" class="section level4 unnumbered hasAnchor">
-<h4>Analysing macro patterns<a href="#analysing-macro-patterns" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Now you have worked through the steps in the computer tutorial on <a href="#downloading-crime-data">downloading</a> and <a href="#mapping-crime-data">mapping</a> crime data, you need to conduct the following analysis <strong>as a group</strong>:</p>
+<div id="part-i-camden-and-islington" class="section level4 unnumbered hasAnchor">
+<h4>Part I: Camden and Islington<a href="#part-i-camden-and-islington" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="note">
 <p>This concerns <em>anti-social behaviour</em> and <em>bicycle theft</em> in Camden and Islington.</p>
 </div>
 <ol style="list-style-type: decimal">
 <li>Using what you have learnt in the computer tutorial to create two heat maps for <strong>Camden and Islington</strong>. The first of <strong>anti-social behaviour</strong> and the second of <strong>bicycle theft</strong>.</li>
-<li>There are a number of crime <strong>hot spots</strong> for <strong>anti-social behaviour</strong> and <strong>bicycle theft</strong> that appear near UCL (particularly around Kings Cross Station). Visit one of these areas (<strong>during daylight hours</strong>) and note down the features that distinguish them from their surrounding lower crime areas. <em>You may use two sides of your field notebook for your observations.</em></li>
+<li>There are a number of crime <strong>hot spots</strong> for <strong>anti-social behaviour</strong> and <strong>bicycle theft</strong> that appear near UCL (particularly around Kings Cross Station). Visit one of these areas (<strong>during daylight hours</strong>) and note down the features that distinguish them from their surrounding lower crime areas. <em>You may use two sides of your field notebook for your observations.</em> If you want to, you can take pictures to add to your report.</li>
 </ol>
 </div>
-<div id="analysing-macro-patterns-1" class="section level4 unnumbered hasAnchor">
-<h4>Analysing macro patterns<a href="#analysing-macro-patterns-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="part-ii-your-allocated-street" class="section level4 unnumbered hasAnchor">
+<h4>Part II: Your allocated street<a href="#part-ii-your-allocated-street" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="note">
 <p>This concerns <em>all types</em> of crime in your allocated street.</p>
 </div>
 <ol start="3" style="list-style-type: decimal">
 <li>Using the full crime data set, zoom in on the street you have been allocated. What is the dominant type of crime on this street and its surrounding area in <strong>November 2021</strong>?</li>
-<li>Revisit the <a href="https://data.police.uk/">data.police.uk</a> website and create a heatmap for all crime around your street in <strong>December 2019</strong> and <strong>December 2020</strong>. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types differ over the course of the years?</li>
+<li>Revisit the <a href="https://data.police.uk/">data.police.uk</a> website and create a heatmap for all crime around your street in <strong>November 2019</strong> and <strong>November 2020</strong>. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types differ over the course of the years?</li>
 <li>Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross what other data sets might be useful to analyse crime in London?</li>
 <li>Do you think the chances of falling victim of crime are higher or lower in the crime hotspots, how might you measure this?</li>
 </ol>
@@ -340,7 +405,7 @@ Figure 22: Saving your QGIs project. <a href="https://jtvandijk.github.io/GEOG00
 </div>
 <div id="submission" class="section level2 unnumbered hasAnchor">
 <h2>Submission<a href="#submission" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Please submit your answers to the questions above in a short <strong>group</strong> report: no more than <strong>500</strong> words, a maximum of <strong>4</strong> maps, and <strong>2</strong> photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on <a href="https://moodle.ucl.ac.uk/course/view.php?id=23839">Moodle</a>; one submission per group. <a href="https://www.youtube.com/watch?v=h_D3VFfhvs4">That is it for this week’s Geography in the Field!</a></p>
+<p>Please submit your answers to the questions above in a short <strong>group</strong> report: no more than <strong>500</strong> words, a maximum of <strong>4</strong> maps, and, if using, <strong>2</strong> photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on <a href="https://moodle.ucl.ac.uk/course/view.php?id=23839">Moodle</a>; one submission per group. <a href="https://www.youtube.com/watch?v=h_D3VFfhvs4">That is it for this week’s Geography in the Field!</a></p>
 
 </div>
 </div>

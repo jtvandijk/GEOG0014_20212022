@@ -353,7 +353,7 @@ Click on the three dots (\textbf{\ldots{}}) next tot the \textbf{Vector Dataset(
 \caption{Loading the roads shapefile. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_shp.png){target="_blank"}}\label{fig:add-shp}
 \end{figure}
 
-Click \textbf{Open}. Then click \textbf{Add}. If you get a messsage popping up saying something about ``Select Transformations for raods'' just click on \textbf{OK}. \textbf{Close} the dialog box. You should now see the road network of Camden and Islington loaded:
+Click \textbf{Open}. Then click \textbf{Add}. If you get a messsage popping up saying something about ``Select Transformations for roads'' just click on \textbf{OK}. Now \textbf{Close} the dialog box. You should now see the road network of Camden and Islington loaded:
 
 \begin{figure}
 
@@ -375,11 +375,11 @@ Now repeat these steps for our \texttt{boroughs} file, making sure again that in
 \caption{Boroughs loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/bor_loaded.png){target="_blank"}}\label{fig:bor-loaded}
 \end{figure}
 
-\hypertarget{organising-data}{%
-\subsection*{Organising data}\label{organising-data}}
-\addcontentsline{toc}{subsection}{Organising data}
+\hypertarget{organising-our-layers}{%
+\subsection*{Organising our layers}\label{organising-our-layers}}
+\addcontentsline{toc}{subsection}{Organising our layers}
 
-Now we have our first set of data loaded, we can reorganise them a little. In the \textbf{Layers} panel, we can drag the \texttt{roads} layer on top of the \texttt{boroughs} layer. We can also zoom to a layer's full extent (right click on \texttt{layer} \textgreater{} \textbf{Zoom to Layer}), change change their colours (right click on \texttt{layer} \textgreater{} \textbf{Properties} \textgreater{} change the colour under the \textbf{Symbology} tab), and zoom in and out by scrolling:
+Now we have our first set of data loaded, we can reorganise them a little. In the \textbf{Layers} panel, we can drag the \texttt{roads} layer on top of the \texttt{boroughs} layer to change their order. We can also zoom to a layer's full extent (right click on \texttt{roads} or \texttt{boroughs} \textgreater{} \textbf{Zoom to Layer}), change a layer's colour (right click on \texttt{roads} or \texttt{boroughs} \textgreater{} \textbf{Properties} \textgreater{} change the colour under the \textbf{Symbology} tab), and zoom in and out of the map by scrolling:
 
 \begin{figure}
 
@@ -387,10 +387,10 @@ Now we have our first set of data loaded, we can reorganise them a little. In th
 
 }
 
-\caption{Boroughs loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif){target="_blank"}}\label{fig:organise-data}
+\caption{Organising the order of our data.. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif){target="_blank"}}\label{fig:organise-data}
 \end{figure}
 
-Before doing anything else, it would be a good idea to now save our QGIS project. Go to \textbf{File} \textgreater{} \textbf{Save} and save your file in your \emph{working directory} as \texttt{crime\_map}.
+Before doing anything else, now would be a good time to save our QGIS project. Go to \textbf{File} \textgreater{} \textbf{Save as} and save your file in your \emph{working directory} as \texttt{crime\_map}.
 
 \begin{figure}
 
@@ -401,15 +401,64 @@ Before doing anything else, it would be a good idea to now save our QGIS project
 \caption{Saving your QGIs project. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png){target="_blank"}}\label{fig:save-project}
 \end{figure}
 
+\hypertarget{inspecting-crime-data-in-excel}{%
+\subsection*{Inspecting crime data in Excel}\label{inspecting-crime-data-in-excel}}
+\addcontentsline{toc}{subsection}{Inspecting crime data in Excel}
+
+The next thing we want to do is have a closer look at the crime data that we downloaded before loading them too in QGIS.
+
+\textbf{Note}
+The crime file that we downloaded is in a so-called \texttt{csv} format. \texttt{csv} stands for comma (or character) separated values. A \texttt{csv} fiile can be thought of as stripped down Excel spreadsheets in which every column of data is separated by a comma. If you open a \texttt{csv} file witin Excel, however, it will look ``normal''.
+
+Navigate to your \texttt{working\ directory} and go to \texttt{crime\_met\_november2021} \textgreater{} \texttt{2021\_11}. Now open the \texttt{2011-11-metropolitan-street} file using Excel.
+
+\begin{figure}
+
+{\centering \includegraphics[width=850pt]{images/w08/inspect_data} 
+
+}
+
+\caption{Inspecting our crime data `csv`. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/inspect_data.gif){target="_blank"}}\label{fig:inspect-data}
+\end{figure}
+
+Besides a column containing a unique \texttt{Crime\ ID} as well as the \texttt{Month} in which the crime has been recorded, our crime data set contains several other columns of data:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.32}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.68}}@{}}
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+Column
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Meaning
+\end{minipage} \\
+\midrule
+\endhead
+\texttt{Reported\ by} & The force that provided the data about the crime. \\
+\texttt{Falls\ within} & The area in which the crime was recorded. \\
+\texttt{Longitude\ and\ Latitude} & The anonymised coordinates of the crime. \\
+\texttt{LSOA\ code\ and\ LSOA\ name} & References to the Lower Layer Super Output Area that the anonymised point falls into, according to the LSOA boundaries provided by the Office for National Statistics. \\
+\texttt{Crime\ type} & One of the crime types used to categorise the offence. \\
+\texttt{Last\ outcome\ category} & A reference to whichever of the outcomes associated with the crime occurred most recently. \\
+\texttt{Context} & A field provided for forces to provide additional human-readable data about individual crimes. \\
+\bottomrule
+\end{longtable}
+
+For us, the main fields we are interested include \texttt{Longitude} and \texttt{Latitude} (for plotting the crimes in QGIS) as well as \texttt{Crime\ Type} (to filter crime based on type of crime). After inspecting the data, you can close Excel again. Make sure that you do \textbf{not} save the file.
+
+\hypertarget{loading-crime-data-into-qgis}{%
+\subsection*{Loading crime data into QGIS}\label{loading-crime-data-into-qgis}}
+\addcontentsline{toc}{subsection}{Loading crime data into QGIS}
+
 \hypertarget{worksheet}{%
 \section*{Worksheet}\label{worksheet}}
 \addcontentsline{toc}{section}{Worksheet}
 
-Now you have worked through the steps in the computer tutorial on \protect\hyperlink{downloading-crime-data}{downloading} and \protect\hyperlink{mapping-crime-data}{mapping} crime data, you should do the following \textbf{as a group}:
+Now you have worked through the steps in the computer tutorial on \protect\hyperlink{downloading-crime-data}{downloading} and \protect\hyperlink{mapping-crime-data}{mapping} crime data, you need to conduct the following analysis \textbf{as a group}:
 
-\hypertarget{analysing-macro-patterns}{%
-\subsubsection*{Analysing macro patterns}\label{analysing-macro-patterns}}
-\addcontentsline{toc}{subsubsection}{Analysing macro patterns}
+\hypertarget{part-i-camden-and-islington}{%
+\subsubsection*{Part I: Camden and Islington}\label{part-i-camden-and-islington}}
+\addcontentsline{toc}{subsubsection}{Part I: Camden and Islington}
 
 This concerns \emph{anti-social behaviour} and \emph{bicycle theft} in Camden and Islington.
 
@@ -419,12 +468,12 @@ This concerns \emph{anti-social behaviour} and \emph{bicycle theft} in Camden an
 \item
   Using what you have learnt in the computer tutorial to create two heat maps for \textbf{Camden and Islington}. The first of \textbf{anti-social behaviour} and the second of \textbf{bicycle theft}.
 \item
-  There are a number of crime \textbf{hot spots} for \textbf{anti-social behaviour} and \textbf{bicycle theft} that appear near UCL (particularly around Kings Cross Station). Visit one of these areas (\textbf{during daylight hours}) and note down the features that distinguish them from their surrounding lower crime areas. \emph{You may use two sides of your field notebook for your observations.}
+  There are a number of crime \textbf{hot spots} for \textbf{anti-social behaviour} and \textbf{bicycle theft} that appear near UCL (particularly around Kings Cross Station). Visit one of these areas (\textbf{during daylight hours}) and note down the features that distinguish them from their surrounding lower crime areas. \emph{You may use two sides of your field notebook for your observations.} If you want to, you can take pictures to add to your report.
 \end{enumerate}
 
-\hypertarget{analysing-macro-patterns-1}{%
-\subsubsection*{Analysing macro patterns}\label{analysing-macro-patterns-1}}
-\addcontentsline{toc}{subsubsection}{Analysing macro patterns}
+\hypertarget{part-ii-your-allocated-street}{%
+\subsubsection*{Part II: Your allocated street}\label{part-ii-your-allocated-street}}
+\addcontentsline{toc}{subsubsection}{Part II: Your allocated street}
 
 This concerns \emph{all types} of crime in your allocated street.
 
@@ -435,7 +484,7 @@ This concerns \emph{all types} of crime in your allocated street.
 \item
   Using the full crime data set, zoom in on the street you have been allocated. What is the dominant type of crime on this street and its surrounding area in \textbf{November 2021}?
 \item
-  Revisit the \href{https://data.police.uk/}{data.police.uk} website and create a heatmap for all crime around your street in \textbf{December 2019} and \textbf{December 2020}. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types differ over the course of the years?
+  Revisit the \href{https://data.police.uk/}{data.police.uk} website and create a heatmap for all crime around your street in \textbf{November 2019} and \textbf{November 2020}. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types differ over the course of the years?
 \item
   Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross what other data sets might be useful to analyse crime in London?
 \item
@@ -446,6 +495,6 @@ This concerns \emph{all types} of crime in your allocated street.
 \section*{Submission}\label{submission}}
 \addcontentsline{toc}{section}{Submission}
 
-Please submit your answers to the questions above in a short \textbf{group} report: no more than \textbf{500} words, a maximum of \textbf{4} maps, and \textbf{2} photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on \href{https://moodle.ucl.ac.uk/course/view.php?id=23839}{Moodle}; one submission per group. \href{https://www.youtube.com/watch?v=h_D3VFfhvs4}{That is it for this week's Geography in the Field!}
+Please submit your answers to the questions above in a short \textbf{group} report: no more than \textbf{500} words, a maximum of \textbf{4} maps, and, if using, \textbf{2} photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on \href{https://moodle.ucl.ac.uk/course/view.php?id=23839}{Moodle}; one submission per group. \href{https://www.youtube.com/watch?v=h_D3VFfhvs4}{That is it for this week's Geography in the Field!}
 
 \end{document}
