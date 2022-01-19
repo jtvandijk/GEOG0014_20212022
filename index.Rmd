@@ -1,7 +1,7 @@
 --- 
 title: "Geography in the Field II: Mapping London"
-author: Justin van Dijk
-date: "`r Sys.Date()`"
+author: Week 08 by [Justin van Dijk](https://mappingdutchman.com/)
+date: "Last modified: `r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -14,13 +14,16 @@ url: 'https\://jtvandijk.github.io/GEOG0014/'
 #  {-}
 
 ## Why London? {-}
-It is an exciting time to be a quantitative geographer in London. The city is generating more data for us to work with than ever before. Maps, graphics and infographics about the city are everywhere more people live here than at any time in London’s history. A great example of the variety of data that is available for London is captured in the book [London: The Information Capital] by [James Cheshire](https://jcheshire.com/) and [Oliver Uberti](https://www.oliveruberti.com/the-information-capital). As geographers, we are in a critical position both to be able to capitalise on these developments for our own research but also view them a little more critically than others who have not had the benefit of decades of social and spatial research.
+It is an exciting time to be a quantitative geographer in London. The city is generating more data for us to work with than ever before. Maps, graphics and infographics about the city are everywhere more people live here than at any time in London’s history. A great example of the variety of data that is available for London is captured in the book [London: The Information Capital](https://www.oliveruberti.com/the-information-capital) by [James Cheshire](https://jcheshire.com/) and [Oliver Uberti](https://www.oliveruberti.com/). As geographers, we are in a critical position both to be able to capitalise on these developments for our own research but also view them a little more critically than others who have not had the benefit of decades of social and spatial research.
 
 ```{r london-information-capital, echo=FALSE, fig.align='center', out.width='500pt', fig.cap='London: The Information Capital by Professor [James Cheshire](https://jcheshire.com/) and [Oliver Uberti](https://www.oliveruberti.com/the-information-capital).'}
 knitr::include_graphics('images/w08/information_capital.png')
 ```
 
 The application of quantitative research methods to data about the "real-world" is at the heart of this exercise. All data are collected at a single point in time and so may become out of date, or they may be too generalised to capture the minutiae of an area. Such limitations are not as significant as they once were since we now have access to data in more detail than ever before, but this does not relinquish the need to get a sense for the broader context of the study area. 
+
+## Lecture material {-}
+You can access the Lecturecast recording here: [[Link]](https://echo360.org.uk/section/499636bf-4a88-4c90-a268-ba74bd9ef17d/home). The slides for this week's lecture can be downloaded here: [[Link]](https://github.com/jtvandijk/GEOG0030/tree/master/data/ppt/w08_gif.pdf).
 
 ## This week {-}
 This week we will be mapping **crime hotspots** in the London boroughs of [Camden](https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en) and [Islington](https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en). The data we will be working with for this week's task are downloaded from the [data.police.uk](https://data.police.uk/) website. The release of official police crime data to the public was controversial at the time, with some people expressing concern that areas will have reputational damage, that the identities of victims would be revealed and that there would be social and economic consequences such as a fall in house prices in high crime areas. Others argued that the release of the data would be an important step in making the police force more accountable since the public could track whether crimes were being solved or if police are using their stop and search powers to target specific groups. 
@@ -52,16 +55,14 @@ knitr::include_graphics('images/w08/ucl_login_success.png')
 ```
 
 ## Downloading crime data {-}
-For our crime data, we will use data directly from the Police Data Portal, which you can find at [data.police.uk](https://data.police.uk/). This Data Portal allows you to access and generate tabular data for crime recorded in the U.K. across different the different police forces.
-
-In total, there are 45 territorial police forces (TPF) and 3 special police forces (SPF) of the United Kingdom. Each TPF covers a specific area in the UK (e.g. the "West Midlands Police Force"), whilst the SPFs are cross-jurisdiction and cover specific types of crime, such as the British Transport Police. Therefore, when we want to download data for a specific area, we need to know which Police Force covers the Area of Interest (AOI) for our investigation.
+For our crime data, we will use data directly from the Police Data Portal, which you can find at [data.police.uk](https://data.police.uk/). This Data Portal allows you to access and generate tabular data for crime recorded in the U.K. across different the different police forces. In total, there are 45 territorial police forces (TPF) and 3 special police forces (SPF) of the United Kingdom. Each TPF covers a specific area in the UK (e.g. the "West Midlands Police Force"), whilst the SPFs are cross-jurisdiction and cover specific types of crime, such as the British Transport Police. Therefore, when we want to download data for a specific area, we need to know which Police Force covers the Area of Interest (AOI) for our investigation.
 
 When you look to download crime data for London, for example, there are two territorial police forces working within the city and its greater metropolitan area:
 
 - *The Metropolitan Police Force*, which covers nearly the entire London area, including Greater London
 - *The City of London Police*, which covers the City of London. The Met has no jurisdiction in the Cit of London.
 
-Today we will leave the City of London for what it is as we are looking at **crime hotspots** in the London boroughs of [Camden](https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en) and [Islington](https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en), both of which are not part of the City of London. To do this, open a browser (**within** your Desktop@UCL environment) and navigate to [data.police.uk](https://data.police.uk/).
+Today we will leave the City of London for what it is as we are looking at **crime hotspots** in the London boroughs of [Camden](https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en) and [Islington](https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en), both of which are not part of the City of London. To do this, open Google Chrome (**within** your Desktop@UCL environment) and navigate to [data.police.uk](https://data.police.uk/).
 
 ```{r data-police, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='The landing page of [data.police.uk](https://data.police.uk). [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/data_police.png){target="_blank"}'}
 knitr::include_graphics('images/w08/data_police.png')
@@ -85,22 +86,66 @@ Save the file as `crime_met_november2021` in your `Downloads` folder.
 knitr::include_graphics('images/w08/save_now.png')
 ```
 
+Your download should be finished within seconds. After downloading the data, go to your `Downloads` folder and right click on the `crime_met_november2021.zip` folder and click on **Extract All**. The data, which is in a compressed format (`zip`), will now be uncompressed so that we can use it within QGIS.
+
+```{r data-police-unzip, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Unzip the data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/extract_zip.png){target="_blank"}'}
+knitr::include_graphics('images/w08/extract_zip.png')
+```
+
+Now we have downloaded the crime data, we need to download some background and reference data. Two data sets are available on Moodle: the boundaries of the boroughs in London as well as the London road network. Within your UCL Desktop environment, navigate to the Geography in the Field II Moodle page and scroll down to **Week 08: Mapping London**.
+
+```{r moodle-w8, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Geography in the Field II Moodle page. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/moodle.png){target="_blank"}'}
+knitr::include_graphics('images/w08/moodle.png')
+```
+
+Under the **Further resources** heading you will see two files: `Roads for mapping exercise` and `Boroughs for mapping exercise`. Right click on on the first file and click on **Save link as ...**. Give the file the name `roads` and save to your download folder.
+
+```{r moodle-w8-save, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Save link as. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_as.png){target="_blank"}'}
+knitr::include_graphics('images/w08/save_as.png')
+```
+
+```{r moodle-w8-save-save, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Save file in your downloads folder. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_as_save.png){target="_blank"}'}
+knitr::include_graphics('images/w08/save_as_save.png')
+```
+
+Right click on on the second file and click on **Save link as ...**. Give the file the name `boroughs` and save to your download folder.
+
+After downloading both files, go to your `Downloads` folder and make sure both are uncompressed. Your `Downloads` folder should look something like this:
+
+```{r your-downloads, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Your download folder should now contain three **unzipped** folders containing our crime data, our borough data and our road data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/all_download.png){target="_blank"}'}
+knitr::include_graphics('images/w08/all_download.png')
+```
+
+The final step we need to take is to copy our downloaded data to a new folder. In your `Documents` folder, create a new folder `GEOG0014_W08`. We will use this folder as our *working directory*. Now move the three folders containg the crime data, borough data and road data that you unzipped from your `Downloads` folder to this new `GEOG0014_W08` folder. Your *working directory* should look like this:
+
+```{r wd, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Your working directory is now all set up. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/wd.png){target="_blank"}'}
+knitr::include_graphics('images/w08/wd.png')
+```
+
+We are now ready to move to mapping in QGIS.
+
 ## Mapping crime data {-}
 
 ## Worksheet {-}
-Now you have worked through the steps in the computer tutorial on [downloading](#downloading-crime-data) and [mapping](#mapping-crime-data) crime data, you should do the following:
+Now you have worked through the steps in the computer tutorial on [downloading](#downloading-crime-data) and [mapping](#mapping-crime-data) crime data, you should do the following **as a group**:
 
+#### Analysing macro patterns {-} 
 :::note
-**Note** <br />
-You should be conducting the below steps together with your group members. You can only submit one worksheet per group.
+This concerns *anti-social behaviour* and *bicycle theft* in Camden and Islington.
 :::
 
-1.	Using what you have learnt in the computer tutorial create two heat maps for **Camden and Islington**. The first of **anti-social behaviour** and the second of **bicycle theft**.
-2.	There are a number of crime **hot spots** for **anti-social behaviour** and **bicycle theft** that appear near UCL (particularly around Kings Cross Station). Using [Google Streetview](https://www.google.com/maps/place/Kings+Cross+Station/@51.531233,-0.1265839,17z/data=!3m1!4b1!4m5!3m4!1s0x48761ba3a5a1470b:0xd5656d630ccedd8c!8m2!3d51.531233!4d-0.1243952) for context, what features distinguish them from their surrounding lower crime areas? 
-4.	Using the data, zoom in on the street you have been allocated. What is the dominant type of crime on this street and its surrounding area in **December*?
-5.	Revisit the [data.police.uk](https://data.police.uk/) website and create a heatmap for crime around your street in **July 2021** and **December 2021**. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types differ over the course of the year?
-6.	Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross what other datasets might be useful to analyse crime in London?
-7.	Do you think the chances of falling victim of crime are higher or lower in the crime hotspots, how might you measure this? 
+1.	Using what you have learnt in the computer tutorial to create two heat maps for **Camden and Islington**. The first of **anti-social behaviour** and the second of **bicycle theft**.
+2.	There are a number of crime **hot spots** for **anti-social behaviour** and **bicycle theft** that appear near UCL (particularly around Kings Cross Station).  Visit one of these areas (**during daylight hours**) and note down the features that distinguish them from their surrounding lower crime areas. *You may use two sides of your field notebook for your observations.*
+
+#### Analysing macro patterns {-} 
+:::note
+This concerns *all types* of crime in your allocated street.
+:::
+
+3.	Using the full crime data set, zoom in on the street you have been allocated. What is the dominant type of crime on this street and its surrounding area in **November 2021**?
+4.	Revisit the [data.police.uk](https://data.police.uk/) website and create a heatmap for all crime around your street in **December 2019** and **December 2020**. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types differ over the course of the years?
+5.	Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross what other data sets might be useful to analyse crime in London?
+6.	Do you think the chances of falling victim of crime are higher or lower in the crime hotspots, how might you measure this? 
 
 ## Submission {-}
 Please submit your answers to the questions above in a short **group** report: no more than **500** words, a maximum of **4** maps, and **2** photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on [Moodle](https://moodle.ucl.ac.uk/course/view.php?id=23839); one submission per group. [That is it for this week's Geography in the Field!](https://www.youtube.com/watch?v=h_D3VFfhvs4)
