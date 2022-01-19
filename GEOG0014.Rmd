@@ -325,8 +325,8 @@ Now you have worked through the steps in the computer tutorial on [downloading](
 This concerns *anti-social behaviour* and *theft from person* in Camden and Islington.
 :::
 
-1.	Using what you have learnt in the computer tutorial to create two heat maps for **Camden and Islington**. The first of **anti-social behaviour** and the second of **theft from person**.
-2.	There are a number of crime **hot spots** for **anti-social behaviour** and ** theft from person** that appear near UCL (particularly around Kings Cross Station).  Visit one of these areas (**during daylight hours**) and note down the features that distinguish them from their surrounding lower crime areas. *You may use two sides of your field notebook for your observations.* If you want to, you can take pictures to add to your report.
+1.	Using what you have learnt in the computer tutorial to create two heatmaps for **Camden and Islington**. The first of **anti-social behaviour** and the second of **theft from person**.
+2.	There are a number of crime **hot spots** for **anti-social behaviour** and ** theft from person** that appear near UCL (particularly around Kings Cross Station).  Visit one of these areas (**during daylight hours**) and note down the features that distinguish them from their surrounding lower crime areas. *You may use two sides of your field notebook for your observations.* If you want to, you can take pictures to add to your worksheet submission.
 
 #### Part II: Your allocated street {-} 
 :::note
@@ -336,7 +336,6 @@ This concerns *all types* of crime in your allocated street.
 3.	Using the full crime data set, zoom in on the street you have been allocated. What is the dominant type of crime on this street and its surrounding area in **November 2021**?
 4.	Revisit the [data.police.uk](https://data.police.uk/) website and create a heatmap for all crime around your street in **November 2019** and **November 2020**. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types differ over the course of the years?
 5.	Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross what other data sets might be useful to analyse crime in London?
-6.	Do you think the chances of falling victim of crime are higher or lower in the crime hotspots, how might you measure this? 
 
 ## Worksheet submission {-}
 Please submit your answers to the questions above in a short **group** report: no more than **500** words, a maximum of **4** maps, and, if using, **2** photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on [Moodle](https://moodle.ucl.ac.uk/course/view.php?id=23839); one submission per group. [That is it for this week's Geography in the Field!](https://www.youtube.com/watch?v=h_D3VFfhvs4)
