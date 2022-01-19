@@ -1,4 +1,0 @@
-mapping-london
-downloading-crime-data
-mapping-crime
-task

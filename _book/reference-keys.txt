@@ -1,4 +1,3 @@
-welcome
 mapping-london
 downloading-crime-data
 mapping-crime
