@@ -151,7 +151,7 @@ We can now start by adding our data. We will start by adding our `roads`. Click 
 knitr::include_graphics('images/w08/add_vector.png')
 ```
 
-Click on the three dots (**...**) next tot the **Vector Dataset(s)** box and navigate to your *working directory*. Then go into your `roads` folder and click on the roads file with the `SHP File` type. This is the roads `shapefile` that we want.
+Click on the three dots (**...**) next to the **Vector Dataset(s)** box and navigate to your *working directory*. Then go into your `roads` folder and click on the roads file with the `SHP File` type. This is the roads `shapefile` that we want.
 
 ```{r add-shp, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Loading the roads shapefile. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_shp.png){target="_blank"}'}
 knitr::include_graphics('images/w08/add_shp.png')
@@ -176,7 +176,7 @@ Now we have our first set of data loaded, we can reorganise them a little. In th
 knitr::include_graphics('images/w08/organise_data.gif')
 ```
 
-Before doing anything else, now would be a good time to save our QGIS project. Go to **File** > **Save as** and save your file in your *working directory* as `crime_map`.
+Before doing anything else, now would be a good time to save our QGIS project. Go to **Project** > **Save as** and save your file in your *working directory* as `crime_map`.
 
 ```{r save-project, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Saving your QGIs project. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png){target="_blank"}'}
 knitr::include_graphics('images/w08/save_project.png')
@@ -211,7 +211,19 @@ Besides a column containing a unique `Crime ID` as well as the `Month` in which 
 For us, the main fields we are interested include `Longitude` and `Latitude` (for plotting the crimes in QGIS) as well as `Crime Type` (to filter crime based on type of crime). After inspecting the data, you can close Excel again. Make sure that you do **not** save the file.
 
 ### Loading crime data into QGIS {-}
+Now we know what we are dealing with, we can load our crime data into QGIS. To do so, there are several steps we need to take:
 
+- Go to **Layer** > **Add Layer** > **Add Delimited Text Layer ...**. Because our data is a `csv` file we need to load it as a file in which columns are delimited by a certain character; a comma in our case.
+- Click on the three dots (*...*) next to the **File name** box and navigate to your *working directory*. Then go into your `crime_met_november2021` folder, your `2021-11` folder, and **Open** the `2021-11-metropolitan-street` file.
+- Under **Geometry Definitions** make sure that **X field** is set to `Longitude` and **Y field** is set to `Latitude`. Here we inform QGIS that we are dealing with locations.
+- Without going into further details, we need to tell QGIS in which projection our crime locations are recorded. With a projection QGIS will know how to plot the crime locations on their correct positions. To do so, still under **Geometry Definitions** tab, click on the **Select CRS** button. You will find this is directly next to the *invalid projection* message. In the **Filter** box type: `EPSG 4326`. Only one option should show up: `WGS 84`. Select this option and click **OK**.
+- Now click **Add**. *This may take a little bit of time!*. Click **Close** to exit the dialog box.
+
+The GIF below summarises these steps:
+
+```{r load-crime-data, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Loading our crime data into QGIS. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/load_crime_data.gif){target="_blank"}'}
+knitr::include_graphics('images/w08/load_crime_data.gif')
+```
 
 ## Worksheet {-}
 Now you have worked through the steps in the computer tutorial on [downloading](#downloading-crime-data) and [mapping](#mapping-crime-data) crime data, you need to conduct the following analysis **as a group**:

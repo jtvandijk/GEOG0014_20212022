@@ -21,4 +21,4 @@ fig:bor-loaded
 fig:organise-data
 fig:save-project
 fig:inspect-data
-inspecting-our-crime-data
+fig:load-crime-data

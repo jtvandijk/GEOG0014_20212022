@@ -86,8 +86,8 @@
 <ul>
 <li><a href="#adding-data">Adding data<span></span></a></li>
 <li><a href="#organising-our-layers">Organising our layers<span></span></a></li>
-<li><a href="#inspecting-our-crime-data">Inspecting our crime data<span></span></a></li>
-<li><a href="#loading-our-crime-data-into-qgis">Loading our crime data into QGIS<span></span></a></li>
+<li><a href="#inspecting-crime-data-in-excel">Inspecting crime data in Excel<span></span></a></li>
+<li><a href="#loading-crime-data-into-qgis">Loading crime data into QGIS<span></span></a></li>
 </ul></li>
 <li><a href="#worksheet">Worksheet<span></span></a></li>
 <li><a href="#submission">Submission<span></span></a></li>
@@ -274,7 +274,7 @@ Figure 16: The QGIS interface. <a href="https://jtvandijk.github.io/GEOG0014/ima
 Figure 17: Adding vector data. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/add_vector.png" target="_blank">[Enlarge image]</a>
 </p>
 </div>
-<p>Click on the three dots (<strong>…</strong>) next tot the <strong>Vector Dataset(s)</strong> box and navigate to your <em>working directory</em>. Then go into your <code>roads</code> folder and click on the roads file with the <code>SHP File</code> type. This is the roads <code>shapefile</code> that we want.</p>
+<p>Click on the three dots (<strong>…</strong>) next to the <strong>Vector Dataset(s)</strong> box and navigate to your <em>working directory</em>. Then go into your <code>roads</code> folder and click on the roads file with the <code>SHP File</code> type. This is the roads <code>shapefile</code> that we want.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:add-shp"></span>
 <img src="images/w08/add_shp.png" alt="Loading the roads shapefile. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_shp.png){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
@@ -305,7 +305,7 @@ Figure 20: Boroughs loaded. <a href="https://jtvandijk.github.io/GEOG0014/images
 Figure 21: Organising the order of our data.. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif" target="_blank">[Enlarge image]</a>
 </p>
 </div>
-<p>Before doing anything else, now would be a good time to save our QGIS project. Go to <strong>File</strong> &gt; <strong>Save as</strong> and save your file in your <em>working directory</em> as <code>crime_map</code>.</p>
+<p>Before doing anything else, now would be a good time to save our QGIS project. Go to <strong>Project</strong> &gt; <strong>Save as</strong> and save your file in your <em>working directory</em> as <code>crime_map</code>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:save-project"></span>
 <img src="images/w08/save_project.png" alt="Saving your QGIs project. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
@@ -313,8 +313,8 @@ Figure 22: Saving your QGIs project. <a href="https://jtvandijk.github.io/GEOG00
 </p>
 </div>
 </div>
-<div id="inspecting-our-crime-data" class="section level3 unnumbered hasAnchor">
-<h3>Inspecting our crime data<a href="#inspecting-our-crime-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="inspecting-crime-data-in-excel" class="section level3 unnumbered hasAnchor">
+<h3>Inspecting crime data in Excel<a href="#inspecting-crime-data-in-excel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The next thing we want to do is have a closer look at the crime data that we downloaded before loading them too in QGIS.</p>
 <div class="note">
 <p><strong>Note</strong> <br />
@@ -372,9 +372,23 @@ Figure 23: Inspecting our crime data <code>csv</code>. <a href="https://jtvandij
 </table>
 <p>For us, the main fields we are interested include <code>Longitude</code> and <code>Latitude</code> (for plotting the crimes in QGIS) as well as <code>Crime Type</code> (to filter crime based on type of crime). After inspecting the data, you can close Excel again. Make sure that you do <strong>not</strong> save the file.</p>
 </div>
-<div id="loading-our-crime-data-into-qgis" class="section level3 unnumbered hasAnchor">
-<h3>Loading our crime data into QGIS<a href="#loading-our-crime-data-into-qgis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Now</p>
+<div id="loading-crime-data-into-qgis" class="section level3 unnumbered hasAnchor">
+<h3>Loading crime data into QGIS<a href="#loading-crime-data-into-qgis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now we know what we are dealing with, we can load our crime data into QGIS. To do so, there are several steps we need to take:</p>
+<ul>
+<li>Go to <strong>Layer</strong> &gt; <strong>Add Layer</strong> &gt; <strong>Add Delimited Text Layer …</strong>. Because our data is a <code>csv</code> file we need to load it as a file in which columns are delimited by a certain character; a comma in our case.</li>
+<li>Click on the three dots (<em>…</em>) next to the <strong>File name</strong> box and navigate to your <em>working directory</em>. Then go into your <code>crime_met_november2021</code> folder, your <code>2021-11</code> folder, and <strong>Open</strong> the <code>2021-11-metropolitan-street</code> file.</li>
+<li>Under <strong>Geometry Definitions</strong> make sure that <strong>X field</strong> is set to <code>Longitude</code> and <strong>Y field</strong> is set to <code>Latitude</code>. Here we inform QGIS that we are dealing with locations.</li>
+<li>Without going into further details, we need to tell QGIS in which projection our crime locations are recorded. With a projection QGIS will know how to plot the crime locations on their correct positions. To do so, still under <strong>Geometry Definitions</strong> tab, click on the <strong>Select CRS</strong> button. You will find this is directly next to the <em>invalid projection</em> message. In the <strong>Filter</strong> box type: <code>EPSG 4326</code>. Only one option should show up: <code>WGS 84</code>. Select this option and click <strong>OK</strong>.</li>
+<li>Now click <strong>Add</strong>. <em>This may take a little bit of time!</em>. Click <strong>Close</strong> to exit the dialog box.</li>
+</ul>
+<p>The GIF below summarises these steps:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:load-crime-data"></span>
+<img src="images/w08/load_crime_data.gif" alt="Loading our crime data into QGIS. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/load_crime_data.gif){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 24: Loading our crime data into QGIS. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/load_crime_data.gif" target="_blank">[Enlarge image]</a>
+</p>
+</div>
 </div>
 </div>
 <div id="worksheet" class="section level2 unnumbered hasAnchor">
