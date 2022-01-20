@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.19)  20 JAN 2022 13:25
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2022.1.19)  20 JAN 2022 17:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -751,7 +751,7 @@ Overfull \hbox (505.00145pt too wide) in paragraph at lines 142--143
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.146 ...ages/w08/ucl_login.png){target="_blank"}}
+l.146 ...ub.io/GEOG0014/images/w08/ucl_login.png)}
                                                   \label{fig:ucl-desktop-login} 
 Here is how much of TeX's memory you used:
  16964 strings out of 478189
