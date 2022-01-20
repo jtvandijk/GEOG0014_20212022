@@ -114,7 +114,7 @@
 <div id="header">
 <h1 class="title">Geography in the Field II: Mapping London</h1>
 <p class="author"><em>Week 08 by <a href="https://mappingdutchman.com/">Justin van Dijk</a></em></p>
-<p class="date"><em>Last modified: 2022-01-19</em></p>
+<p class="date"><em>Last modified: 2022-01-20</em></p>
 </div>
 <div id="section" class="section level1 unnumbered">
 <h1 class="unnumbered"></h1>
@@ -384,7 +384,7 @@ Figure 23: Inspecting our crime data <code>csv</code>. <a href="https://jtvandij
 <li>Without going into further details, we need to tell QGIS in which projection our crime locations are recorded. With a projection QGIS will know how to plot the crime locations on their correct positions. To do so, still under <strong>Geometry Definitions</strong> tab, click on the <strong>Select CRS</strong> button. You will find this is directly next to the <em>invalid projection</em> message. In the <strong>Filter</strong> box type: <code>EPSG 4326</code>. Only one option should show up: <code>WGS 84</code>. Select this option and click <strong>OK</strong>.</li>
 <li>Now click <strong>Add</strong>. <em>This may take a little bit of time!</em>. Click <strong>Close</strong> to exit the dialog box.</li>
 </ul>
-<p>The GIF below summarises these steps:</p>
+<p>The <strong>GIF</strong> below summarises these steps:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:load-crime-data"></span>
 <img src="images/w08/load_crime_data.gif" alt="Loading our crime data into QGIS. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/load_crime_data.gif){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
@@ -407,14 +407,14 @@ Figure 25: All crime that is recorded in Camden and Islington in November 2021. 
 <li>Select the <code>boroughs</code> layer by clicking on it.</li>
 <li>Click on the <strong>Select Features by Area or Single Click</strong> button: <br /><br />
 <img src="images/w08/select.png" width="50" style="display: block; margin: auto;" />
-<br /><em>Please note that the <strong>Select Features by Area or Single Click</strong> button may be located in a different place than it is in the GIF below.</em> <br /><br /></li>
+<br /><em>Please note that the <strong>Select Features by Area or Single Click</strong> button may be located in a different place than it is in the <strong>GIF</strong> below.</em> <br /><br /></li>
 <li>Press and hold the <strong>Shift</strong> button on your keyboard and click on Camden and Islington.</li>
-<li>Right click on the <code>boroughs</code> layer in the <strong>Layers</strong> panel &gt; <strong>Export</strong> &gt; <strong>Save Selected Features As … </strong>.</li>
+<li>Right click on the <code>boroughs</code> layer in the <strong>Layers</strong> panel &gt; <strong>Export</strong> &gt; <strong>Save Selected Features As …</strong>.</li>
 <li>Set the <strong>Format</strong> to <strong>Esri Shapefile</strong>.</li>
 <li>Click on the three dots (<strong>…</strong>) next to <strong>File name</strong>, navigate to your <em>working directory</em> and save the file as <code>cam_is</code>.</li>
 <li>A new layer should now appear and you can untick the box next to the <code>boroughs</code> layer.</li>
 </ul>
-<p>The GIF below summarises these steps:</p>
+<p>The <strong>GIF</strong> below summarises these steps:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:select-boroughs"></span>
 <img src="images/w08/select_export.gif" alt="Selecting and exporting the boroughs of Camden and Islington. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/select_export.gif){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
@@ -426,9 +426,9 @@ Figure 26: Selecting and exporting the boroughs of Camden and Islington. <a href
 <li>Go to <strong>Vector</strong> &gt; <strong>Geoprocessing Tools</strong> &gt; <strong>Clip …</strong>.</li>
 <li>Set <code>2011-11-metropolitan-street</code> as <strong>Input layer</strong> and set <code>cam_is</code> as <strong>Overlay layer</strong>.</li>
 <li>Click on the three dots (<strong>…</strong>) next to the empty box with <em>[Create temporary layer]</em> and opt for <strong>Save to File …</strong>. Navigate to your <em>working directory</em> and type in <code>cam_is_clip</code> as <strong>File name</strong>. Change <strong>Save as type</strong> to <code>SHP files (*.shp)</code> and click <strong>Save</strong>.</li>
-<li>Click <strong>Run</strong>. <em>This may take a few seconds.</em>. Once the process is done, you can click <strong>Close</strong>.</li>
+<li>Click <strong>Run</strong>. <em>This may take a few seconds.</em> Once the process is done, you can click <strong>Close</strong>.</li>
 </ul>
-We now have successfully “clipped” the crimes that occurred within the boundaries of Camden and Islington. The GIF below summarises these steps:
+We now have successfully “clipped” the crimes that occurred within the boundaries of Camden and Islington. The <strong>GIF</strong> below summarises these steps:
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:select-crimes"></span>
 <img src="images/w08/select_crime.gif" alt="Selecting and exporting the crimes that fall within the boroughs of Camden and Islington. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/select_crime.gif){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
@@ -452,7 +452,7 @@ Figure 28: We are now ready to visualise our data. <a href="https://jtvandijk.gi
 <li>Once the plugin is installed you can go to <strong>Web</strong> &gt; <strong>QuickMapServices</strong> &gt; <strong>OSM</strong> &gt; <strong>OSM Standard</strong>. <em>OSM stands for <a href="https://www.openstreetmap.org/#map=6/54.910/-3.432">OpenStreetMap</a>. OpenStreetMap is a collaborative project to create a free editable geographic database of the world.</em> It may take a few seconds to load the base map.</li>
 <li>Turn off the Camden and Islington map layer (<code>cam_is</code>) in the <strong>Layers</strong> panel by unticking it.</li>
 </ul>
-<p>You now have a view of the street data, pulled from OpenStreetMap, with the crime data drawn on top. The GIF below summarises these steps:</p>
+<p>You now have a view of the street data, pulled from OpenStreetMap, with the crime data drawn on top. The <strong>GIF</strong> below summarises these steps:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:adding-basemap"></span>
 <img src="images/w08/add_basemap.gif" alt="Adding a basemap layer. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_basemap.gif){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
@@ -466,7 +466,7 @@ Figure 29: Adding a basemap layer. <a href="https://jtvandijk.github.io/GEOG0014
 <li>Click on the <strong>Value</strong> dropdown menu and select <code>Crime type</code>. <em>Note that these are the columns that we have seen when we looked at the data in Excel.</em></li>
 <li>At the bottom of the menu click on <strong>Classify</strong>. All the different crime types now appear, with each their own symbol. Click <strong>Apply</strong> and click <strong>OK</strong>.</li>
 </ul>
-<p>The QGIS screen now shows a colour for each crime type. The GIF below summarises these steps:</p>
+<p>The QGIS screen now shows a colour for each crime type. The <strong>GIF</strong> below summarises these steps:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:colour-crimes"></span>
 <img src="images/w08/colour_crime.gif" alt="Differentiating crime types. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/colour_crime.gif){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
@@ -487,7 +487,7 @@ Figure 31: Only crime classified as <em>anti-social behaviour</em> is shown. <a 
 <li>Using the drop down menu, change the <strong>Color ramp</strong> to <strong>Magma</strong> for a little more exciting map.</li>
 <li>Under <strong>Layer Rendering</strong> set the <strong>Opacity</strong> to 60%, so to blend the heatmap with the OSM basemap. Click <strong>Apply</strong>. <em>This may take a few seconds.</em> Then click <strong>OK</strong>.</li>
 </ul>
-<p>We now have created a rather nice visualisation of all crime in Camden and Islington. The GIF below summarises these steps:</p>
+<p>We now have created a rather nice visualisation of all crime in Camden and Islington. The <strong>GIF</strong> below summarises these steps:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:hot-crime"></span>
 <img src="images/w08/hot_crime.gif" alt="Adding a basemap layer. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/hot_crime.gif){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
@@ -523,7 +523,7 @@ Figure 32: Adding a basemap layer. <a href="https://jtvandijk.github.io/GEOG0014
 </div>
 <div id="worksheet-submission" class="section level2 unnumbered hasAnchor">
 <h2>Worksheet submission<a href="#worksheet-submission" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Please submit your answers to the questions above in a short <strong>group</strong> report: no more than <strong>500</strong> words, a maximum of <strong>4</strong> maps, and, if using, <strong>2</strong> photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on <a href="https://moodle.ucl.ac.uk/course/view.php?id=23839">Moodle</a>; one submission per group. <a href="https://www.youtube.com/watch?v=h_D3VFfhvs4">That is it for this week’s Geography in the Field!</a></p>
+<p>Please submit your answers to the questions above in a short <strong>group</strong> report: no more than <strong>500</strong> words, a maximum of <strong>4</strong> maps, and, if using, a maximum of <strong>2</strong> photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on <a href="https://moodle.ucl.ac.uk/course/view.php?id=23839">Moodle</a>; one submission per group. <a href="https://www.youtube.com/watch?v=h_D3VFfhvs4">That is it for this week’s Geography in the Field!</a></p>
 
 </div>
 </div>

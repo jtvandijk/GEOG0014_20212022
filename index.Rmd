@@ -219,7 +219,7 @@ Now we know what we are dealing with, we can load our crime data into QGIS. To d
 - Without going into further details, we need to tell QGIS in which projection our crime locations are recorded. With a projection QGIS will know how to plot the crime locations on their correct positions. To do so, still under **Geometry Definitions** tab, click on the **Select CRS** button. You will find this is directly next to the *invalid projection* message. In the **Filter** box type: `EPSG 4326`. Only one option should show up: `WGS 84`. Select this option and click **OK**.
 - Now click **Add**. *This may take a little bit of time!*. Click **Close** to exit the dialog box.
 
-The GIF below summarises these steps:
+The **GIF** below summarises these steps:
 
 ```{r load-crime-data, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Loading our crime data into QGIS. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/load_crime_data.gif){target="_blank"}'}
 knitr::include_graphics('images/w08/load_crime_data.gif')
@@ -240,14 +240,14 @@ Because the crime data set covers the whole of London, and even records some cri
 ```{r select-features, echo=FALSE, fig.align='center'}
 knitr::include_graphics('images/w08/select.png')
 ```
-<br />*Please note that the **Select Features by Area or Single Click** button may be located in a different place than it is in the GIF below.* <br /><br />
+<br />*Please note that the **Select Features by Area or Single Click** button may be located in a different place than it is in the **GIF** below.* <br /><br />
 - Press and hold the **Shift** button on your keyboard and click on Camden and Islington.
-- Right click on the `boroughs` layer in the **Layers** panel > **Export** > **Save Selected Features As ... **.
+- Right click on the `boroughs` layer in the **Layers** panel > **Export** > **Save Selected Features As ...**.
 - Set the **Format** to **Esri Shapefile**.
 - Click on the three dots (**...**) next to **File name**, navigate to your *working directory* and save the file as `cam_is`. 
 - A new layer should now appear and you can untick the box next to the `boroughs` layer.
 
-The GIF below summarises these steps:
+The **GIF** below summarises these steps:
 
 ```{r select-boroughs, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Selecting and exporting the boroughs of Camden and Islington. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/select_export.gif){target="_blank"}'}
 knitr::include_graphics('images/w08/select_export.gif')
@@ -258,9 +258,9 @@ The next thing to do is to extract only those crimes that fall within the bounda
 - Go to **Vector** > **Geoprocessing Tools** > **Clip ...**.
 - Set `2011-11-metropolitan-street` as **Input layer** and set `cam_is` as **Overlay layer**.
 - Click on the three dots (**...**) next to the empty box with *[Create temporary layer]* and opt for **Save to File ...**. Navigate to your *working directory* and type in `cam_is_clip` as **File name**. Change **Save as type** to `SHP files (*.shp)` and click **Save**.
-- Click **Run**. *This may take a few seconds.*. Once the process is done, you can click **Close**. 
+- Click **Run**. *This may take a few seconds.* Once the process is done, you can click **Close**. 
 
-We now have successfully "clipped" the crimes that occurred within the boundaries of Camden and Islington. The GIF below summarises these steps:
+We now have successfully "clipped" the crimes that occurred within the boundaries of Camden and Islington. The **GIF** below summarises these steps:
 ```{r select-crimes, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Selecting and exporting the crimes that fall within the boroughs of Camden and Islington. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/select_crime.gif){target="_blank"}'}
 knitr::include_graphics('images/w08/select_crime.gif')
 ```
@@ -279,7 +279,7 @@ Based on the shapes of the streets and the outline of the street network, you ma
 - Once the plugin is installed you can go to **Web** > **QuickMapServices** > **OSM** > **OSM Standard**. *OSM stands for [OpenStreetMap](https://www.openstreetmap.org/#map=6/54.910/-3.432). OpenStreetMap is a collaborative project to create a free editable geographic database of the world.* It may take a few seconds to load the base map.
 - Turn off the Camden and Islington map layer (`cam_is`) in the **Layers** panel by unticking it.
 
-You now have a view of the street data, pulled from OpenStreetMap, with the crime data drawn on top. The GIF below summarises these steps:
+You now have a view of the street data, pulled from OpenStreetMap, with the crime data drawn on top. The **GIF** below summarises these steps:
 
 ```{r adding-basemap, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Adding a basemap layer. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_basemap.gif){target="_blank"}'}
 knitr::include_graphics('images/w08/add_basemap.gif')
@@ -292,7 +292,7 @@ The next thing we want to do is get some more insight into our crimes. As we kno
 - Click on the **Value** dropdown menu and select `Crime type`. *Note that these are the columns that we have seen when we looked at the data in Excel.*
 - At the bottom of the menu click on **Classify**. All the different crime types now appear, with each their own symbol. Click **Apply** and click **OK**.
 
-The QGIS screen now shows a colour for each crime type. The GIF below summarises these steps:
+The QGIS screen now shows a colour for each crime type. The **GIF** below summarises these steps:
 
 ```{r colour-crimes, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Differentiating crime types. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/colour_crime.gif){target="_blank"}'}
 knitr::include_graphics('images/w08/colour_crime.gif')
@@ -311,7 +311,7 @@ In addition, we can create a **hotspot** or **heatmap**. QGIS can do this automa
 - Using the drop down menu, change the **Color ramp** to **Magma** for a little more exciting map.
 - Under **Layer Rendering** set the **Opacity** to 60%, so to blend the heatmap with the OSM basemap. Click **Apply**. *This may take a few seconds.* Then click **OK**.
 
-We now have created a rather nice visualisation of all crime in Camden and Islington. The GIF below summarises these steps:
+We now have created a rather nice visualisation of all crime in Camden and Islington. The **GIF** below summarises these steps:
 
 ```{r hot-crime, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Adding a basemap layer. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/hot_crime.gif){target="_blank"}'}
 knitr::include_graphics('images/w08/hot_crime.gif')
@@ -338,4 +338,4 @@ This concerns *all types* of crime in your allocated street.
 5.	Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross what other data sets might be useful to analyse crime in London?
 
 ## Worksheet submission {-}
-Please submit your answers to the questions above in a short **group** report: no more than **500** words, a maximum of **4** maps, and, if using, **2** photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on [Moodle](https://moodle.ucl.ac.uk/course/view.php?id=23839); one submission per group. [That is it for this week's Geography in the Field!](https://www.youtube.com/watch?v=h_D3VFfhvs4)
+Please submit your answers to the questions above in a short **group** report: no more than **500** words, a maximum of **4** maps, and, if using, a maximum of **2** photographs. This is the worksheet task for the week. You can find the submission link for this final worksheet task on [Moodle](https://moodle.ucl.ac.uk/course/view.php?id=23839); one submission per group. [That is it for this week's Geography in the Field!](https://www.youtube.com/watch?v=h_D3VFfhvs4)
