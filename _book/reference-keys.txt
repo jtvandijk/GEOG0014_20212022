@@ -30,3 +30,4 @@ fig:adding-basemap
 fig:colour-crimes
 fig:one-crime
 fig:hot-crime
+fig:hot-crime-asb
