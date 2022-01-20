@@ -30,27 +30,27 @@ This week we will be mapping **crime hotspots** in the London boroughs of [Camde
 
 :::note
 **Note** <br />
-You are expected to work through the following computer tutorial on your own, however, you need to submit your worksheet for this week as a group.
+You are expected to work through the following computer tutorial on your own, however, you will submit your worksheet for this week as a group.
 :::
 
 ## Getting started {-}
-Some of you may already have played around with some GIS software such as [ArcGIS](https://www.arcgis.com/index.html), but today we will be using the open-source GIS sofware suite [QGIS](https://www.qgis.org/en/site/). A copy of [QGIS](https://www.qgis.org/en/site/) comes pre-installed on all cluster room computers as well as on [Desktop@UCL Anywhere](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere). Desktop@UCL Anywhere is a service that allows remote access to UCL resources for staff and students. All you need is a valid UCL user ID and password, an internet connection and supported web browser. Today we will be using this Desktop@UCL Anywhere service. 
+Some of you may already have played around with some GIS software such as [ArcGIS](https://www.arcgis.com/index.html), but today we will be using the open-source GIS sofware suite [QGIS](https://www.qgis.org/en/site/). A copy of [QGIS](https://www.qgis.org/en/site/) comes pre-installed on all cluster room computers as well as on [Desktop@UCL Anywhere](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere). Desktop\@UCL Anywhere is a service that allows remote access to UCL resources for staff and students. All you need is a valid UCL user ID and password, an internet connection and supported web browser. Today we will be using this Desktop\@UCL Anywhere service. 
 
 Let's get started by opening an internet browser such as [Google Chrome](https://www.google.co.uk/chrome/?brand=FHFK&gclid=Cj0KCQiAip-PBhDVARIsAPP2xc26lB3ONziz2KnCd7Ac1MVjTx66n0Ull4R8oiQqzXzgKnJSqRCwK60aAhmFEALw_wcB&gclsrc=aw.ds) or [Microsoft Edge](https://www.microsoft.com/en-us/edge) and navigating to: [https://ucldesktop.cloud.com](https://ucldesktop.cloud.com).
 
-```{r ucl-desktop-login, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='[Desktop@UCL Anywhere]((https://ucldesktop.cloud.com)) login interface. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/ucl_login.png){target="_blank"}'}
+```{r ucl-desktop-login, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='[Desktop@UCL Anywhere](https://ucldesktop.cloud.com) login interface. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/ucl_login.png){target="_blank"}'}
 knitr::include_graphics('images/w08/ucl_login.png')
 ```
 
-You can log in with your normal **UCL username** and **UCL password**. After this, you click on the Desktop@UCL Anywhere icon to start the service:
+You can log in with your normal **UCL username** and **UCL password**. After this, you click on the Desktop\@UCL Anywhere icon to start the service:
 
-```{r ucl-desktop-start, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Starting [Desktop@UCL Anywhere]((https://ucldesktop.cloud.com)). [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/ucl_start.png){target="_blank"}'}
+```{r ucl-desktop-start, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Starting [Desktop@UCL Anywhere](https://ucldesktop.cloud.com). [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/ucl_start.png){target="_blank"}'}
 knitr::include_graphics('images/w08/ucl_start.png')
 ```
 
 It may take a few minutes to load, but after this you should see your normal UCL Windows desktop:
 
-```{r ucl-desktop-login-success, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Your [Desktop@UCL Anywhere]((https://ucldesktop.cloud.com)). [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/ucl_login_success.png){target="_blank"}'}
+```{r ucl-desktop-login-success, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Your [Desktop@UCL Anywhere](https://ucldesktop.cloud.com). [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/ucl_login_success.png){target="_blank"}'}
 knitr::include_graphics('images/w08/ucl_login_success.png')
 ```
 
@@ -62,7 +62,7 @@ When you look to download crime data for London, for example, there are two terr
 - *The Metropolitan Police Force*, which covers nearly the entire London area, including Greater London
 - *The City of London Police*, which covers the City of London. The Met has no jurisdiction in the Cit of London.
 
-Today we will leave the City of London for what it is as we are looking at **crime hotspots** in the London boroughs of [Camden](https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en) and [Islington](https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en), both of which are not part of the City of London. To do this, open Google Chrome (**within** your Desktop@UCL environment) and navigate to [data.police.uk](https://data.police.uk/). *You are free to use another browser, however, some of the steps below describing how to download some of the files may be slightly different.*
+Today we will leave the City of London for what it is as we are looking at **crime hotspots** in the London boroughs of [Camden](https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en) and [Islington](https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en), both of which are not part of the City of London. To do this, open Google Chrome (**within** your Desktop\@UCL environment) and navigate to [data.police.uk](https://data.police.uk/). *You are free to use another browser, however, some of the steps below describing how to download some of the files may be slightly different.*
 
 ```{r data-police, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='The landing page of [data.police.uk](https://data.police.uk). [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/data_police.png){target="_blank"}'}
 knitr::include_graphics('images/w08/data_police.png')
@@ -130,7 +130,7 @@ The `roads` and `boroughs` file that we downloaded is something called a `shapef
 :::
 
 ## Mapping crime data {-}
-Now we have downloaded and organised our data, we can open QGIS. QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the taskbar, type in QGIS and click on **QGIS Desktop 3.16** to open the software. **Make sure you do not open QGIS 2.18 as the steps in this tutorial will not work!**. 
+Now we have downloaded and organised our data, we can open QGIS. QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the taskbar, type in QGIS and click on **QGIS Desktop 3.16** to open the software. **Make sure you do not open QGIS 2.18 as the steps in this tutorial will not work!**
 
 ```{r open-qgis, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Open **QGIS Desktop 3.16.11**. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/open_qgis.png){target="_blank"}'}
 knitr::include_graphics('images/w08/open_qgis.png')
@@ -240,7 +240,12 @@ Because the crime data set covers the whole of London, and even records some cri
 ```{r select-features, echo=FALSE, fig.align='center'}
 knitr::include_graphics('images/w08/select.png')
 ```
-<br />*Please note that the **Select Features by Area or Single Click** button may be located in a different place than it is in the **GIF** below.* <br /><br />
+
+:::note
+**Note** <br/>
+The **Select Features by Area or Single Click** button may be located in a different place than it is in the **GIF** below.
+:::
+
 - Press and hold the **Shift** button on your keyboard and click on Camden and Islington.
 - Right click on the `boroughs` layer in the **Layers** panel > **Export** > **Save Selected Features As ...**.
 - Set the **Format** to **Esri Shapefile**.
@@ -397,8 +402,8 @@ Excellent. You have worked through the steps in this computer tutorial on [downl
 This concerns *anti-social behaviour* and *theft from person* in Camden and Islington.
 :::
 
-1.	Using what you have learnt in the computer tutorial to create two heatmaps for **Camden and Islington**. The first of **anti-social behaviour** and the second of **theft from person**.
-2.	There are a number of crime **hot spots** for **anti-social behaviour** and ** theft from person** that appear near UCL (particularly around Kings Cross Station).  Visit one of these areas (**during daylight hours**) and note down the features that distinguish them from their surrounding lower crime areas. *You may use two sides of your field notebook for your observations.* If you want to, you can take pictures to add to your worksheet submission.
+1.	Using what you have learnt in the computer tutorial to create two heatmaps for **Camden and Islington**. The first of *anti-social behaviour* and the second of *theft from person*.
+2.	There are a number of crime **hot spots** for *anti-social behaviour* and *theft from person* that appear near UCL (particularly around Kings Cross Station).  Visit one of these areas (**during daylight hours**) and note down the features that distinguish them from their surrounding lower crime areas. *You may use two sides of your field notebook for your observations.* If you want to, you can take pictures to add to your worksheet submission.
 
 #### Part II: Your allocated street {-} 
 :::note
