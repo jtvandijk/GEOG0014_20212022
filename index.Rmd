@@ -157,7 +157,7 @@ Click on the three dots (**...**) next to the **Vector Dataset(s)** box and navi
 knitr::include_graphics('images/w08/add_shp.png')
 ```
 
-Click **Open**. Then click **Add**. If you get a messsage popping up saying something about "Select Transformations for roads" just click on **OK**. Now **Close** the dialog box. You should now see the road network of Camden and Islington loaded:
+Click **Open**. Then click **Add**. If you get a message popping up saying something about "Select Transformations for roads" just click on **OK**. Now **Close** the dialog box. You should now see the road network of Camden and Islington loaded:
 
 ```{r roads-loaded, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Roads loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/roads_loaded.png){target="_blank"}'}
 knitr::include_graphics('images/w08/roads_loaded.png')
@@ -272,6 +272,7 @@ knitr::include_graphics('images/w08/ready_vis.png')
 ```
 
 :::note
+**Note** <br />
 Do not forget to save your progress once a while!
 :::
 
@@ -349,10 +350,47 @@ knitr::include_graphics('images/w08/hot_crime_asb.gif')
 ```
 
 ### Creating a map in QGIS {-}
-We have been through the key steps that we need to create the map, however, there are some other things we can do. For instance, if
+We have been through the key steps that we need to create the map, however, there are some other things we can do. For instance, if we want to put the borough outlines on, we can:
+
+- Tick the box next to the `cam_is` layer in the **Layers** panel to switch the layer back on.
+- Right click on the `cam_is` layer and choose **Properties**.
+- Under the **Symbology** tab we can make some adjustments to the **Simple Fill** settings: in this case we can set the **Fill style** to **No brush**. We can also make the outline thicker by increasing the **Stroke width**. Once this is done click **Apply** followed by **OK**.
+
+The **GIF** below summarises these steps:
+
+```{r bor-out, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Adding borough outlines to the map. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/bor_out.gif){target="_blank"}'}
+knitr::include_graphics('images/w08/bor_out.gif')
+```
+
+In this exercise we have downloaded some data, created a spatial data object by loading the data into QGIS, made selections to our data (i.e. by clipping out our boroughs and by making a selection on crime type), and we have looked at some of the styling options. The final step is to finalise the styling and get the map out of QGIS. This is done through the QGIS **Print Layout**:
+
+- Go to **Project** > **New Print Layout ...**.
+- Give it a name, e.g. `crime_asb`. 
+- A new window opens up. In the toolbar on the left hand side, click on the **Add map** button:
+<br /><br /> 
+```{r add-map, echo=FALSE, fig.align='center'}
+knitr::include_graphics('images/w08/add_map.png')
+```
+<br /><br />
+- Draw a box on the canvas. The crime map should now appear.
+- Using the toolbar on the left hand side, there is several other options such as **Add scale bar**, **Add North Arrow**, and **Add Legend**. *There are lots of options to play around with!*
+- Once you are happy with your map, you can save your map by going to **Layout** > **Export as Image ...**. If you get a message popping up saying something about "Project Contains WMS Layers" just click on **Close**. Navigate to your *working directory*, give your map a name and click **Save**. Also click **Save** on the next window that pops up.
+
+These steps should create an image which you should be able to find in your *working directory*. The **GIF** below summarises these steps:
+
+```{r export-map, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Finalising a map in the **Print Layout** and saving a map as an image. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/export_map.gif){target="_blank"}'}
+knitr::include_graphics('images/w08/export_map.gif')
+```
+
+This image is now ready to be used outside QGIS!
+
+:::note
+**Note** <br/>
+There are many more options on how to style the maps, so do play around with colours and settings when making your maps. 
+:::
 
 ## Worksheet {-} 
-Now you have worked through the steps in the computer tutorial on [downloading](#downloading-crime-data) and [mapping](#mapping-crime-data) crime data, you need to conduct the following analysis **as a group**:
+Excellent. You have worked through the steps in this computer tutorial on [downloading](#downloading-crime-data) and [mapping](#mapping-crime-data) crime data, you need to conduct the following analysis **as a group**:
 
 #### Part I: Camden and Islington {-} 
 :::note

@@ -284,7 +284,7 @@ Figure 17: Adding vector data. <a href="https://jtvandijk.github.io/GEOG0014/ima
 Figure 18: Loading the roads shapefile. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/add_shp.png" target="_blank">[Enlarge image]</a>
 </p>
 </div>
-<p>Click <strong>Open</strong>. Then click <strong>Add</strong>. If you get a messsage popping up saying something about “Select Transformations for roads” just click on <strong>OK</strong>. Now <strong>Close</strong> the dialog box. You should now see the road network of Camden and Islington loaded:</p>
+<p>Click <strong>Open</strong>. Then click <strong>Add</strong>. If you get a message popping up saying something about “Select Transformations for roads” just click on <strong>OK</strong>. Now <strong>Close</strong> the dialog box. You should now see the road network of Camden and Islington loaded:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:roads-loaded"></span>
 <img src="images/w08/roads_loaded.png" alt="Roads loaded. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/roads_loaded.png){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
@@ -444,7 +444,8 @@ Figure 28: We are now ready to visualise our data. <a href="https://jtvandijk.gi
 </p>
 </div>
 <div class="note">
-<p>Do not forget to save your progress once a while!</p>
+<p><strong>Note</strong> <br />
+Do not forget to save your progress once a while!</p>
 </div>
 </div>
 <div id="visualising-data-in-qgis" class="section level3 unnumbered hasAnchor">
@@ -527,12 +528,48 @@ Figure 33: Selecting all crime recorded as <em>anti-social behaviour</em> and ex
 </div>
 <div id="creating-a-map-in-qgis" class="section level3 unnumbered hasAnchor">
 <h3>Creating a map in QGIS<a href="#creating-a-map-in-qgis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We have been through the key steps that we need to create the map, however, there are some other things we can do. For instance, if</p>
+<p>We have been through the key steps that we need to create the map, however, there are some other things we can do. For instance, if we want to put the borough outlines on, we can:</p>
+<ul>
+<li>Tick the box next to the <code>cam_is</code> layer in the <strong>Layers</strong> panel to switch the layer back on.</li>
+<li>Right click on the <code>cam_is</code> layer and choose <strong>Properties</strong>.</li>
+<li>Under the <strong>Symbology</strong> tab we can make some adjustments to the <strong>Simple Fill</strong> settings: in this case we can set the <strong>Fill style</strong> to <strong>No brush</strong>. We can also make the outline thicker by increasing the <strong>Stroke width</strong>. Once this is done click <strong>Apply</strong> followed by <strong>OK</strong>.</li>
+</ul>
+<p>The <strong>GIF</strong> below summarises these steps:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bor-out"></span>
+<img src="images/w08/bor_out.gif" alt="Adding borough outlines to the map. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/bor_out.gif){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 34: Adding borough outlines to the map. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/bor_out.gif" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+<p>In this exercise we have downloaded some data, created a spatial data object by loading the data into QGIS, made selections to our data (i.e. by clipping out our boroughs and by making a selection on crime type), and we have looked at some of the styling options. The final step is to finalise the styling and get the map out of QGIS. This is done through the QGIS <strong>Print Layout</strong>:</p>
+<ul>
+<li>Go to <strong>Project</strong> &gt; <strong>New Print Layout …</strong>.</li>
+<li>Give it a name, e.g. <code>crime_asb</code>.</li>
+<li>A new window opens up. In the toolbar on the left hand side, click on the <strong>Add map</strong> button:
+<br /><br />
+<img src="images/w08/add_map.png" width="36" style="display: block; margin: auto;" />
+<br /><br /></li>
+<li>Draw a box on the canvas. The crime map should now appear.</li>
+<li>Using the toolbar on the left hand side, there is several other options such as <strong>Add scale bar</strong>, <strong>Add North Arrow</strong>, and <strong>Add Legend</strong>. <em>There are lots of options to play around with!</em></li>
+<li>Once you are happy with your map, you can save your map by going to <strong>Layout</strong> &gt; <strong>Export as Image …</strong>. If you get a message popping up saying something about “Project Contains WMS Layers” just click on <strong>Close</strong>. Navigate to your <em>working directory</em>, give your map a name and click <strong>Save</strong>. Also click <strong>Save</strong> on the next window that pops up.</li>
+</ul>
+<p>These steps should create an image which you should be able to find in your <em>working directory</em>. The <strong>GIF</strong> below summarises these steps:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:export-map"></span>
+<img src="images/w08/export_map.gif" alt="Finalising a map in the **Print Layout** and saving a map as an image. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/export_map.gif){target=&quot;_blank&quot;}" width="850pt" />
+<p class="caption">
+Figure 35: Finalising a map in the <strong>Print Layout</strong> and saving a map as an image. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/export_map.gif" target="_blank">[Enlarge image]</a>
+</p>
+</div>
+<p>This image is now ready to be used outside QGIS!</p>
+<div class="note">
+<p><strong>Note</strong> <br/>
+There are many more options on how to style the maps, so do play around with colours and settings when making your maps.</p>
+</div>
 </div>
 </div>
 <div id="worksheet" class="section level2 unnumbered hasAnchor">
 <h2>Worksheet<a href="#worksheet" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Now you have worked through the steps in the computer tutorial on <a href="#downloading-crime-data">downloading</a> and <a href="#mapping-crime-data">mapping</a> crime data, you need to conduct the following analysis <strong>as a group</strong>:</p>
+<p>Excellent. You have worked through the steps in this computer tutorial on <a href="#downloading-crime-data">downloading</a> and <a href="#mapping-crime-data">mapping</a> crime data, you need to conduct the following analysis <strong>as a group</strong>:</p>
 <div id="part-i-camden-and-islington" class="section level4 unnumbered hasAnchor">
 <h4>Part I: Camden and Islington<a href="#part-i-camden-and-islington" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div class="note">
