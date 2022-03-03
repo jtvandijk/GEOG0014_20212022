@@ -431,6 +431,7 @@ You can find the submission link for this final worksheet task on [Moodle](https
 
 - One submission per group. Make sure to include the [group work coversheet](https://moodle.ucl.ac.uk/pluginfile.php/3653586/mod_label/intro/GEOG0014%20Geography%20in%20the%20Field%20II_Groupwork_coversheet.docx) in your submission and you follow the [guidelines for group submissions](https://moodle.ucl.ac.uk/mod/page/view.php?id=2638813). 
 - Your file should be submitted anonymously by the allocated team leader by **noon on Friday 18 March**, using the Turnitin link on the course [Moodle page](https://moodle.ucl.ac.uk/course/view.php?id=23839) entitled worksheet number 4. 
+- Please submit the worksheet as a `Word` or `PDF` document, no larger than 40 MB.
 - Do check that the file has uploaded and displays correctly. 
 
 ## Further questions {-}
