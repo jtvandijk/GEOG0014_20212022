@@ -130,7 +130,7 @@ The `roads` and `boroughs` file that we downloaded is something called a `shapef
 :::
 
 ## Mapping crime data {-}
-Now we have downloaded and organised our data, we can open QGIS. QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the taskbar, type in QGIS and click on **QGIS Desktop 3.16** to open the software. **Make sure you do not open QGIS 2.18 as the steps in this tutorial will not work!**
+Now we have downloaded and organised our data, we can open QGIS. QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the taskbar, type in QGIS and click on **QGIS Desktop 3.16** to open the software. **Do not use QGIS 2.18 as the steps in this tutorial will not work!**
 
 ```{r open-qgis, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Open **QGIS Desktop 3.16.11**. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/open_qgis.png){target="_blank"}'}
 knitr::include_graphics('images/w08/open_qgis.png')
