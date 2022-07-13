@@ -178,7 +178,7 @@ knitr::include_graphics('images/w08/organise_data.gif')
 
 Before doing anything else, now would be a good time to save our QGIS project. Go to **Project** > **Save as** and save your file in your *working directory* as `crime_map`.
 
-```{r save-project, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Saving your QGIs project. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png){target="_blank"}'}
+```{r save-project, echo=FALSE, fig.align='center', out.width='850pt', fig.cap='Saving your QGIS project. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png){target="_blank"}'}
 knitr::include_graphics('images/w08/save_project.png')
 ```
 

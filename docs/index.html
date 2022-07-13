@@ -32,7 +32,7 @@
   
 
 
-<script src="libs/header-attrs-2.11.10/header-attrs.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,9 +50,8 @@
 
 
 
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 
@@ -77,24 +76,24 @@
 <li class="divider"></li>
 <li><a href="#section"></a>
 <ul>
-<li><a href="#why-london">Why London?<span></span></a></li>
-<li><a href="#lecture-material">Lecture material<span></span></a></li>
-<li><a href="#this-week">This week<span></span></a></li>
-<li><a href="#getting-started">Getting started<span></span></a></li>
-<li><a href="#downloading-crime-data">Downloading crime data<span></span></a></li>
-<li><a href="#mapping-crime-data">Mapping crime data<span></span></a>
+<li class="chapter" data-level="" data-path=""><a href="#why-london"><i class="fa fa-check"></i>Why London?</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#lecture-material"><i class="fa fa-check"></i>Lecture material</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#this-week"><i class="fa fa-check"></i>This week</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#getting-started"><i class="fa fa-check"></i>Getting started</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#downloading-crime-data"><i class="fa fa-check"></i>Downloading crime data</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#mapping-crime-data"><i class="fa fa-check"></i>Mapping crime data</a>
 <ul>
-<li><a href="#adding-data">Adding data<span></span></a></li>
-<li><a href="#organising-our-layers">Organising our layers<span></span></a></li>
-<li><a href="#inspecting-crime-data-in-excel">Inspecting crime data in Excel<span></span></a></li>
-<li><a href="#loading-crime-data-into-qgis">Loading crime data into QGIS<span></span></a></li>
-<li><a href="#creating-selections-in-qgis">Creating selections in QGIS<span></span></a></li>
-<li><a href="#visualising-data-in-qgis">Visualising data in QGIS<span></span></a></li>
-<li><a href="#creating-a-map-in-qgis">Creating a map in QGIS<span></span></a></li>
+<li class="chapter" data-level="" data-path=""><a href="#adding-data"><i class="fa fa-check"></i>Adding data</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#organising-our-layers"><i class="fa fa-check"></i>Organising our layers</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#inspecting-crime-data-in-excel"><i class="fa fa-check"></i>Inspecting crime data in Excel</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#loading-crime-data-into-qgis"><i class="fa fa-check"></i>Loading crime data into QGIS</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#creating-selections-in-qgis"><i class="fa fa-check"></i>Creating selections in QGIS</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#visualising-data-in-qgis"><i class="fa fa-check"></i>Visualising data in QGIS</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#creating-a-map-in-qgis"><i class="fa fa-check"></i>Creating a map in QGIS</a></li>
 </ul></li>
-<li><a href="#worksheet">Worksheet<span></span></a></li>
-<li><a href="#worksheet-submission">Worksheet submission<span></span></a></li>
-<li><a href="#further-questions">Further questions<span></span></a></li>
+<li class="chapter" data-level="" data-path=""><a href="#worksheet"><i class="fa fa-check"></i>Worksheet</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#worksheet-submission"><i class="fa fa-check"></i>Worksheet submission</a></li>
+<li class="chapter" data-level="" data-path=""><a href="#further-questions"><i class="fa fa-check"></i>Further questions</a></li>
 </ul></li>
 </ul>
 
@@ -116,12 +115,12 @@
 <div id="header">
 <h1 class="title">Geography in the Field II: Mapping London</h1>
 <p class="author"><em>Week 08 by <a href="https://mappingdutchman.com/">Justin van Dijk</a></em></p>
-<p class="date"><em>Last modified: 2022-03-07</em></p>
+<p class="date"><em>Last modified: 2022-07-13</em></p>
 </div>
 <div id="section" class="section level1 unnumbered">
 <h1 class="unnumbered"></h1>
-<div id="why-london" class="section level2 unnumbered hasAnchor">
-<h2>Why London?<a href="#why-london" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="why-london" class="section level2 unnumbered">
+<h2>Why London?</h2>
 <p>It is an exciting time to be a quantitative geographer in London. The city is generating more data for us to work with than ever before. Maps, graphics and infographics about the city are everywhere more people live here than at any time in London’s history. A great example of the variety of data that is available for London is captured in the book <a href="https://www.oliveruberti.com/the-information-capital">London: The Information Capital</a> by <a href="https://jcheshire.com/">James Cheshire</a> and <a href="https://www.oliveruberti.com/">Oliver Uberti</a>. As geographers, we are in a critical position both to be able to capitalise on these developments for our own research but also view them a little more critically than others who have not had the benefit of decades of social and spatial research.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:london-information-capital"></span>
 <img src="images/w08/information_capital.png" alt="London: The Information Capital by Professor [James Cheshire](https://jcheshire.com/) and [Oliver Uberti](https://www.oliveruberti.com/the-information-capital)." width="500pt" />
@@ -131,20 +130,20 @@ Figure 1: London: The Information Capital by Professor <a href="https://jcheshir
 </div>
 <p>The application of quantitative research methods to data about the “real-world” is at the heart of this exercise. All data are collected at a single point in time and so may become out of date, or they may be too generalised to capture the minutiae of an area. Such limitations are not as significant as they once were since we now have access to data in more detail than ever before, but this does not relinquish the need to get a sense for the broader context of the study area.</p>
 </div>
-<div id="lecture-material" class="section level2 unnumbered hasAnchor">
-<h2>Lecture material<a href="#lecture-material" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="lecture-material" class="section level2 unnumbered">
+<h2>Lecture material</h2>
 <p>You can access the Lecturecast recording here: <a href="https://echo360.org.uk/section/499636bf-4a88-4c90-a268-ba74bd9ef17d/home">[Link]</a>. The slides for this week’s lecture can be downloaded here: <a href="https://github.com/jtvandijk/GEOG0014/blob/master/data/ppt/w08_gif.pdf">[Link]</a>.</p>
 </div>
-<div id="this-week" class="section level2 unnumbered hasAnchor">
-<h2>This week<a href="#this-week" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="this-week" class="section level2 unnumbered">
+<h2>This week</h2>
 <p>This week we will be mapping <strong>crime hotspots</strong> in the London boroughs of <a href="https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en">Camden</a> and <a href="https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en">Islington</a>. The data we will be working with for this week’s task are downloaded from the <a href="https://data.police.uk/">data.police.uk</a> website. The release of official police crime data to the public was controversial at the time, with some people expressing concern that areas will have reputational damage, that the identities of victims would be revealed and that there would be social and economic consequences such as a fall in house prices in high crime areas. Others argued that the release of the data would be an important step in making the police force more accountable since the public could track whether crimes were being solved or if police are using their stop and search powers to target specific groups.</p>
 <div class="note">
 <p><strong>Note</strong> <br />
 You are expected to work through the following computer tutorial on your own, however, you will submit your worksheet for this week as a group.</p>
 </div>
 </div>
-<div id="getting-started" class="section level2 unnumbered hasAnchor">
-<h2>Getting started<a href="#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="getting-started" class="section level2 unnumbered">
+<h2>Getting started</h2>
 <p>Some of you may already have played around with some GIS software such as <a href="https://www.arcgis.com/index.html">ArcGIS</a>, but today we will be using the open-source GIS sofware suite <a href="https://www.qgis.org/en/site/">QGIS</a>. A copy of <a href="https://www.qgis.org/en/site/">QGIS</a> comes pre-installed on all cluster room computers as well as on <a href="https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere">Desktop@UCL Anywhere</a>. Desktop@UCL Anywhere is a service that allows remote access to UCL resources for staff and students. All you need is a valid UCL user ID and password, an internet connection and supported web browser. Today we will be using this Desktop@UCL Anywhere service.</p>
 <p>Let’s get started by opening an internet browser such as <a href="https://www.google.co.uk/chrome/?brand=FHFK&amp;gclid=Cj0KCQiAip-PBhDVARIsAPP2xc26lB3ONziz2KnCd7Ac1MVjTx66n0Ull4R8oiQqzXzgKnJSqRCwK60aAhmFEALw_wcB&amp;gclsrc=aw.ds">Google Chrome</a> or <a href="https://www.microsoft.com/en-us/edge">Microsoft Edge</a> and navigating to: <a href="https://ucldesktop.cloud.com">https://ucldesktop.cloud.com</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ucl-desktop-login"></span>
@@ -168,8 +167,8 @@ Figure 4: Your <a href="https://ucldesktop.cloud.com">Desktop@UCL Anywhere</a>. 
 </p>
 </div>
 </div>
-<div id="downloading-crime-data" class="section level2 unnumbered hasAnchor">
-<h2>Downloading crime data<a href="#downloading-crime-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="downloading-crime-data" class="section level2 unnumbered">
+<h2>Downloading crime data</h2>
 <p>For our crime data, we will use data directly from the Police Data Portal, which you can find at <a href="https://data.police.uk/">data.police.uk</a>. This Data Portal allows you to access and generate tabular data for crime recorded in the U.K. across different the different police forces. In total, there are 45 territorial police forces (TPF) and 3 special police forces (SPF) of the United Kingdom. Each TPF covers a specific area in the UK (e.g. the “West Midlands Police Force”), whilst the SPFs are cross-jurisdiction and cover specific types of crime, such as the British Transport Police. Therefore, when we want to download data for a specific area, we need to know which Police Force covers the Area of Interest (AOI) for our investigation.</p>
 <p>When you look to download crime data for London, for example, there are two territorial police forces working within the city and its greater metropolitan area:</p>
 <ul>
@@ -252,8 +251,8 @@ Figure 14: Your working directory is now all set up. <a href="https://jtvandijk.
 The <code>roads</code> and <code>boroughs</code> file that we downloaded is something called a <code>shapefile.</code> A <code>shapefile</code> is a file that GIS software uses to store spatial data. In the case of a shapefile this is in actual fact a misnomer because a <code>shapefile</code> consists of a <strong>collection of files</strong>. Without going into detail: each of these files does something slightly different and the the software we will be using requires needs all of them in order to understand the data.</p>
 </div>
 </div>
-<div id="mapping-crime-data" class="section level2 unnumbered hasAnchor">
-<h2>Mapping crime data<a href="#mapping-crime-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="mapping-crime-data" class="section level2 unnumbered">
+<h2>Mapping crime data</h2>
 <p>Now we have downloaded and organised our data, we can open QGIS. QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the taskbar, type in QGIS and click on <strong>QGIS Desktop 3.16</strong> to open the software. <strong>Do not use QGIS 2.18 as the steps in this tutorial will not work!</strong></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:open-qgis"></span>
 <img src="images/w08/open_qgis.png" alt="Open **QGIS Desktop 3.16.11**. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/open_qgis.png){target=&quot;_blank&quot;}" width="850pt" />
@@ -269,8 +268,8 @@ Figure 16: The QGIS interface. <a href="https://jtvandijk.github.io/GEOG0014/ima
 </p>
 </div>
 <p>On the left hand sizes you see two panels: <strong>Layers</strong> and <strong>Browser</strong>. We do not really need the second one, so you can close it by clicking on the <code>x</code>.</p>
-<div id="adding-data" class="section level3 unnumbered hasAnchor">
-<h3>Adding data<a href="#adding-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="adding-data" class="section level3 unnumbered">
+<h3>Adding data</h3>
 <p>We can now start by adding our data. We will start by adding our <code>roads</code>. Click on <strong>Layer</strong> &gt; <strong>Add Layer</strong> &gt; <strong>Add Vector Layer …</strong>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:add-vector"></span>
 <img src="images/w08/add_vector.png" alt="Adding vector data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/add_vector.png){target=&quot;_blank&quot;}" width="850pt" />
@@ -300,8 +299,8 @@ Figure 20: Boroughs loaded. <a href="https://jtvandijk.github.io/GEOG0014/images
 </p>
 </div>
 </div>
-<div id="organising-our-layers" class="section level3 unnumbered hasAnchor">
-<h3>Organising our layers<a href="#organising-our-layers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="organising-our-layers" class="section level3 unnumbered">
+<h3>Organising our layers</h3>
 <p>Now we have our first set of data loaded, we can reorganise them a little. In the <strong>Layers</strong> panel, we can drag the <code>roads</code> layer on top of the <code>boroughs</code> layer to change their order. We can also zoom to a layer’s full extent (right click on <code>roads</code> or <code>boroughs</code> &gt; <strong>Zoom to Layer</strong>), change a layer’s colour (right click on <code>roads</code> or <code>boroughs</code> &gt; <strong>Properties …</strong> &gt; change the colour under the <strong>Symbology</strong> tab), and zoom in and out of the map by scrolling:</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:organise-data"></span>
 <img src="images/w08/organise_data.gif" alt="Organising the order of our data.. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/organise_data.gif){target=&quot;_blank&quot;}" width="850pt" />
@@ -311,14 +310,14 @@ Figure 21: Organising the order of our data.. <a href="https://jtvandijk.github.
 </div>
 <p>Before doing anything else, now would be a good time to save our QGIS project. Go to <strong>Project</strong> &gt; <strong>Save as</strong> and save your file in your <em>working directory</em> as <code>crime_map</code>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:save-project"></span>
-<img src="images/w08/save_project.png" alt="Saving your QGIs project. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png){target=&quot;_blank&quot;}" width="850pt" />
+<img src="images/w08/save_project.png" alt="Saving your QGIS project. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png){target=&quot;_blank&quot;}" width="850pt" />
 <p class="caption">
-Figure 22: Saving your QGIs project. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png" target="_blank">[Enlarge image]</a>
+Figure 22: Saving your QGIS project. <a href="https://jtvandijk.github.io/GEOG0014/images/w08/save_project.png" target="_blank">[Enlarge image]</a>
 </p>
 </div>
 </div>
-<div id="inspecting-crime-data-in-excel" class="section level3 unnumbered hasAnchor">
-<h3>Inspecting crime data in Excel<a href="#inspecting-crime-data-in-excel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="inspecting-crime-data-in-excel" class="section level3 unnumbered">
+<h3>Inspecting crime data in Excel</h3>
 <p>The next thing we want to do is have a closer look at the crime data that we downloaded before loading them too in QGIS.</p>
 <div class="note">
 <p><strong>Note</strong> <br />
@@ -376,8 +375,8 @@ Figure 23: Inspecting our crime data <code>csv</code>. <a href="https://jtvandij
 </table>
 <p>For us, the main fields we are interested include <code>Longitude</code> and <code>Latitude</code> (for plotting the crimes in QGIS) as well as <code>Crime Type</code> (to filter crime based on type of crime). After inspecting the data, you can close Excel again. Make sure that you do <strong>not</strong> save the file.</p>
 </div>
-<div id="loading-crime-data-into-qgis" class="section level3 unnumbered hasAnchor">
-<h3>Loading crime data into QGIS<a href="#loading-crime-data-into-qgis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="loading-crime-data-into-qgis" class="section level3 unnumbered">
+<h3>Loading crime data into QGIS</h3>
 <p>Now we know what we are dealing with, we can load our crime data into QGIS. To do so, there are several steps we need to take:</p>
 <ul>
 <li>Go to <strong>Layer</strong> &gt; <strong>Add Layer</strong> &gt; <strong>Add Delimited Text Layer …</strong>. Because our data is a <code>csv</code> file we need to load it as a file in which columns are delimited by a certain character; a comma in our case.</li>
@@ -401,8 +400,8 @@ Figure 25: All crime that is recorded in Camden and Islington in November 2021. 
 </p>
 </div>
 </div>
-<div id="creating-selections-in-qgis" class="section level3 unnumbered hasAnchor">
-<h3>Creating selections in QGIS<a href="#creating-selections-in-qgis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="creating-selections-in-qgis" class="section level3 unnumbered">
+<h3>Creating selections in QGIS</h3>
 <p>Because the crime data set covers the whole of London, and even records some crimes in locations outside of London, QGIS may get a little slow. As we are only interested in crimes in Camden and Islington we want to keep only those crimes that took place in these boroughs, and remove the rest. We will do that in two steps. First we wil export the boundaries of Camden and Islington as a separate file. Second we will select the crimes that fall within the boundaries of Camden and Islington. Let’s first export the boundaries of Camden and Islington:</p>
 <ul>
 <li>Untick the boxes of the <code>roads</code> and <code>2021-11-metropolitan-street</code> layers in the <strong>Layers</strong> panel to deactivate them.</li>
@@ -454,8 +453,8 @@ Figure 28: We are now ready to visualise our data. <a href="https://jtvandijk.gi
 Do not forget to save your progress once a while!</p>
 </div>
 </div>
-<div id="visualising-data-in-qgis" class="section level3 unnumbered hasAnchor">
-<h3>Visualising data in QGIS<a href="#visualising-data-in-qgis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="visualising-data-in-qgis" class="section level3 unnumbered">
+<h3>Visualising data in QGIS</h3>
 <p>Based on the shapes of the streets and the outline of the street network, you may be able to recognise your allocated street. However, we can also add something called a <em>base map</em> layer. A base map is a layer with geographic information that serves as a background and is incredibly useful when you want to add some context to your map. We do need a little plugin to add this base map. We can do that as follows:</p>
 <ul>
 <li>Go to <strong>Plugins</strong> &gt; <strong>Manage and Install Plugins</strong>.</li>
@@ -532,8 +531,8 @@ Figure 33: Selecting all crime recorded as <em>anti-social behaviour</em> and ex
 </p>
 </div>
 </div>
-<div id="creating-a-map-in-qgis" class="section level3 unnumbered hasAnchor">
-<h3>Creating a map in QGIS<a href="#creating-a-map-in-qgis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="creating-a-map-in-qgis" class="section level3 unnumbered">
+<h3>Creating a map in QGIS</h3>
 <p>We have been through the key steps that we need to create the map, however, there are some other things we can do. For instance, if we want to put the borough outlines on, we can:</p>
 <ul>
 <li>Tick the box next to the <code>cam_is</code> layer in the <strong>Layers</strong> panel to switch the layer back on.</li>
@@ -573,11 +572,11 @@ There are many more options on how to style the maps, so do play around with col
 </div>
 </div>
 </div>
-<div id="worksheet" class="section level2 unnumbered hasAnchor">
-<h2>Worksheet<a href="#worksheet" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="worksheet" class="section level2 unnumbered">
+<h2>Worksheet</h2>
 <p>Excellent. You have worked through the steps in this computer tutorial on <a href="#downloading-crime-data">downloading</a> and <a href="#mapping-crime-data">mapping</a> crime data, you need to conduct the following analysis <strong>as a group</strong>:</p>
-<div id="part-i-camden-and-islington" class="section level4 unnumbered hasAnchor">
-<h4>Part I: Camden and Islington<a href="#part-i-camden-and-islington" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="part-i-camden-and-islington" class="section level4 unnumbered">
+<h4>Part I: Camden and Islington</h4>
 <div class="note">
 <p>This concerns <em>anti-social behaviour</em> and <em>theft from person</em> in Camden and Islington.</p>
 </div>
@@ -591,8 +590,8 @@ For your visit: <strong>make sure that you visit as a group during the scheduled
 <p>You may further use 1-2 pages your field notebook for your individual observations. If you want to, you can take photographs to add to your worksheet submission, however, not ones that clearly feature individual people.</p>
 </div>
 </div>
-<div id="part-ii-your-allocated-street" class="section level4 unnumbered hasAnchor">
-<h4>Part II: Your allocated street<a href="#part-ii-your-allocated-street" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="part-ii-your-allocated-street" class="section level4 unnumbered">
+<h4>Part II: Your allocated street</h4>
 <div class="note">
 <p>This concerns <em>all types</em> of crime in your allocated street.</p>
 </div>
@@ -603,8 +602,8 @@ For your visit: <strong>make sure that you visit as a group during the scheduled
 </ol>
 </div>
 </div>
-<div id="worksheet-submission" class="section level2 unnumbered hasAnchor">
-<h2>Worksheet submission<a href="#worksheet-submission" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="worksheet-submission" class="section level2 unnumbered">
+<h2>Worksheet submission</h2>
 <p>Please submit your answers to the questions above in a short <strong>group</strong> report:</p>
 <ul>
 <li>No more than <strong>500</strong> words.</li>
@@ -618,8 +617,8 @@ For your visit: <strong>make sure that you visit as a group during the scheduled
 <li>Do check that the file has uploaded and displays correctly.</li>
 </ul>
 </div>
-<div id="further-questions" class="section level2 unnumbered hasAnchor">
-<h2>Further questions<a href="#further-questions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="further-questions" class="section level2 unnumbered">
+<h2>Further questions</h2>
 <p>Any questions about these tasks please use the W08 forum on <a href="https://moodle.ucl.ac.uk/mod/hsuforum/view.php?id=2638558">Moodle</a>. <a href="https://www.youtube.com/watch?v=h_D3VFfhvs4">That is it for this week’s Geography in the Field!</a></p>
 
 </div>
@@ -661,7 +660,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/jtvandijk/GEOG0014/edit/master/index.Rmd",
+"link": "https://github.com/jtvandijk/GEOG0014_20212022/edit/master/index.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -672,7 +671,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["https://github.com/jtvandijk/GEOG0014/raw/master/index.Rmd"],
+"download": ["https://github.com/jtvandijk/GEOG0014_20212022/raw/master/index.Rmd"],
 "search": {
 "engine": "fuse",
 "options": null
